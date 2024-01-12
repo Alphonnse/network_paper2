@@ -1,0 +1,4043 @@
+\documentclass[14pt, a4paper]{extarticle}
+% Русская локализация
+\usepackage[english,russian]{babel}
+
+% Использование математических шрифтов
+\usepackage{unicode-math}
+
+% Шрифты
+\usepackage{fontspec}
+\usepackage{courier}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+\setmainfont[Ligatures={TeX}]{Times New Roman}
+\setmonofont{Courier New}
+\setmathfont{XITS Math}
+
+% Расширенные ссылки
+\usepackage{nameref}
+
+% Оформление URL
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    breaklinks=true,
+}
+\urlstyle{same}
+
+% Поддержка изображений
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.jpg,.png}
+
+% Таблицы
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{multirow}
+\usepackage{hhline} 
+% Выравнивание по левому краю, с многострочностью
+\newcolumntype{s}{>{\raggedright\arraybackslash}X}
+
+% Поддержка листингов
+\usepackage{listings}
+\lstdefinestyle{gost}{
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    keepspaces=true,
+    showspaces=false,          
+    showstringspaces=false,
+    frame=single
+}
+\lstset{style=gost}%
+
+% Отступ первой строки первого абзаца
+\usepackage{indentfirst}
+\linespread{1.25}
+
+% Размер полей в документе
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+% Абзацный отступ
+\setlength{\parindent}{1.25cm}
+
+% Отступ для элементов в списке
+\usepackage{enumitem}
+\setlist{left=\parindent, labelsep=1cm, itemsep=0pt, topsep=0pt}
+
+% Загрузка pdf-документов (нужно для титульников)
+\usepackage[final]{pdfpages}
+% Возможность поворота pdf файло
+\usepackage{pdflscape}
+\usepackage{everypage}
+
+\newcommand{\Lpagenumber}{\ifdim\textwidth=\linewidth\else\bgroup%
+  \dimendef\margin=0 %use \margin instead of \dimen0
+  \ifodd\value{page}\margin=\oddsidemargin
+  \else\margin=\evensidemargin%
+  \fi
+  \raisebox{\dimexpr-\topmargin-\headheight-\headsep-0.5\linewidth}[0pt][0pt]{%
+    \rlap{\hspace{\dimexpr-\margin+\textheight+\footskip}%
+    \llap{\rotatebox{90}{\thepage}}}}%
+\egroup\fi}
+\AddEverypageHook{\Lpagenumber}%
+
+\usepackage{float}
+% Форматирование подписей
+\usepackage{caption}
+
+\usepackage{newfloat}
+%\DeclareCaptionType{listing}
+
+\DeclareCaptionLabelSeparator{emdash}{\;\textemdash\;}
+\captionsetup[figure]{name={Рисунок}, labelsep=emdash, justification=centering, position=above, singlelinecheck=off, font={small, bf}, labelfont=bf, skip=6pt}
+\captionsetup[table]{name={Таблица}, labelsep=emdash, justification=raggedright, position=top, singlelinecheck=off, font={small, it}, labelfont=it, skip=6pt, margin=0cm}
+\captionsetup[lstlisting]{labelsep=emdash, justification=raggedright, position=top, singlelinecheck=off, font={small, it}, labelfont=it, skip=6pt, margin=0cm}
+
+% Нумеровать внутри заголовков первого уровня
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+%\counterwithin{lstlisting}{section}
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
+
+% Отключение переносов текста
+\usepackage{ragged2e}
+\justifying
+\tolerance=500
+\hyphenpenalty=10000
+\emergencystretch=3em
+
+% Форматирование заголовков
+\usepackage{titlesec}
+% Оформление заголовка первого уровня
+% Полужирное начертание
+% Кегль 18 пт
+% С новой страницы
+\titleformat{\section}[block]
+	{\newpage\bfseries\fontsize{18pt}{21.6pt}\selectfont}
+        {\thesection}
+        {1em}{}
+% Оформление ненумерованных заголовков (Введение, Содержание, список источников, и.т.д.)
+\titleformat{name=\section,numberless}[block]
+	{\centering\newpage\bfseries\fontsize{18pt}{21.6pt}\selectfont}
+        {}
+        {0em}{}{}
+% Отступы у заголовков первого уровня
+\titlespacing{\section}
+ {\parindent}% отступ слева (равен 1.25 см, как у отступа первой строки абзаца)
+ {0em}% интервал перед
+ {10mm}% интервал после
+% Оформление заголовков второго уровня
+\titleformat{\subsection}[block]
+	{\bfseries\fontsize{16pt}{19.2pt}\selectfont}
+        {\thesubsection}
+        {1em}{}
+% Отступы у заголовков второго уровня
+\titlespacing{\subsection}
+ {\parindent}% пробел слева
+ {15mm}% отступ перед
+ {10mm}% отступ после
+% Оформление заголовков второго уровня
+\titleformat{\subsubsection}[block]
+	{\bfseries\selectfont}
+        {\thesubsection}
+        {1em}{}
+% Отступы у заголовков второго уровня
+\titlespacing{\subsubsection}
+ {\parindent}% пробел слева
+ {15mm}% отступ перед
+ {10mm}% отступ после
+
+% Оформление заголовков в содержании
+\usepackage{titletoc}
+\contentsmargin{0pt}
+\renewcommand\contentspage{\thecontentspage}
+\dottedcontents{section}[2.3em]{}{2.3em}{5pt}
+\dottedcontents{subsection}[2.3em]{}{2.3em}{5pt}
+% Оформление приложений
+\usepackage{appendix}
+\renewcommand\appendixpagename{ПРИЛОЖЕНИЯ}
+
+% Подключение biblatex, с использованием стиля gost-numeric
+\usepackage[
+citestyle=gost-numeric,
+style=gost-numeric, 
+blockpunct=emdash,
+backend=biber,
+sorting=none
+]{biblatex}
+% Запрет разрыва url ссылок
+\defcounter{biburlnumpenalty}{3000}
+\defcounter{biburlucpenalty}{6000}
+\defcounter{biburllcpenalty}{9000}
+% Добавление полей для ссылок и даты обращения к ним
+\DeclareFieldFormat{url}{Режим доступа: #1}
+\DeclareFieldFormat{urldate}{(Дата обращения: #1)}
+\renewcommand*{\entrysetpunct}{\par\nopunct\!\!}
+% Использовать prac.bib как источник
+\addbibresource{kurs.bib}
+% Форматирование заголовка библиографии
+\defbibheading{bibliography}[\bibname]{%
+  \section*{\centering #1}%
+  \markboth{#1}{#1}}
+
+
+\usepackage{lipsum}
+\begin{document}
+\def\contentsname{СОДЕРЖАНИЕ}
+
+% Загрузка титула
+\pagenumbering{gobble}
+\begin{titlepage}
+\includepdf[pages={1-2}]{title}
+\end{titlepage}
+\pagenumbering{arabic}
+\setcounter{page}{3}
+% Содержание
+\tableofcontents
+
+\clearpage
+\section*{ВВЕДЕНИЕ}
+\addcontentsline{toc}{section}{ВВЕДЕНИЕ}
+
+В современном мире использование сети Интернет является неотъемлемой
+частью жизни общества. Для коммерческого же сектора сеть
+является важным инструментом для работы предприятия. Она позволяет
+быстро, безопасно и надежно передавать информацию между
+организационными единицами предприятия, ускоряет процессы принятия
+решений и снижает затраты на обмен информацией. Это делает сеть
+передачи данных необходимым инструментом элементом инфраструктуры
+предприятий, которая требует постоянного обслуживания и грамотного
+проектирования.
+
+В рамках данной курсовой работы будет рассмотрен процесс
+проектирования и реализации сети передачи данных на примере
+предприятия, которая осущевствляет оптовую торговлю бытовой химией.
+
+Актуальность темы <<Проектирование сети передачи данных предприятия>>
+обусловлена необходимостью создания эффективной инфраструктуры для
+передачи данных внутри предприятия, которая обеспечит более
+эффективное исполнение бизнес-процессов предприятия. Объектом
+исследования является сеть передачи предприятия, предметом ---
+особенности проектирования и реализации сети передачи данных, целью
+--- планирование и реализация сети передачи данных.
+
+Задачи исследования включают в себя анализ исходных данных
+поставленной задачи --- изучение изучение требований и ограничений,
+связанных с созданием сети, а также анализ имеющейся инфраструктуры и
+ресурсов, планирование сетей уровня 2 и 3 --- изучение разделения сети
+на подсети, разделения физических сетей на виртуальные логические
+сети, определение маршрутизации, прототипирование и настройка сети с
+последующим тестированием. А также планирование политик фильтрации
+трафика, управления пользователей, сетевых сервисов.
+
+В работе будут использованы такие методы исследования, как анализ
+научной литературы, анализ статистических данных, сравнительный анализ
+различных технологий и протоколов передачи данных, моделирование и
+прототипирование с помощью специальных программных средств.
+
+В качестве инструментальных средств будут использованы:
+\begin{enumerate}
+\item Программное средство проектирования сети передачи данных Cisco Packet Tracer.
+\item Веб-сервис для построения топологии сети и различных диаграмм
+  diagrams.net.
+\item Средства виртуализации для примерного развертывания сервисов, а
+  также расчета нагрузки сетевых сервисов на сеть (Oracle VirtualBox).
+\end{enumerate}
+
+Основными источниками будут являться нормативные документы, научные
+статьи и книги.
+
+Основное содержание работы будет состоять из следующих пунктов:
+\begin{enumerate}
+\item Определение структуры предприятия.
+\item Расчёт пропускной способности каналов передачи данных.
+\item Прототипирование сети.
+\item Планирование сети уровня 2.
+\item Планирование сети уровня 3.
+\item Планирование политик фильтрации трафика.
+\item Планирование политик обеспечения качества обслуживания.
+\item Планирование службы доменных имен.
+\item Планирование политик управления пользователями.
+\item Планирование внедрения DHCP-сервера.
+\item Планирование других сетевых служб.
+\item Определение и расчет сервисной нагрузки.
+\item Моделирование сервисов.
+\item Моделирование сети передачи данных
+\end{enumerate}
+
+\section{ОПРЕДЕЛЕНИЕ СТРУКТУРЫ ПРЕДПРИЯТИЯ}
+
+В данном пункте требуется конкретизировать структуру предприятия,
+определить отделы и группы пользователей, а также требования к сети,
+которые определяются пользователями.
+
+Схема расчета количества рабочих мест для основного здания
+(Рисунок\;\ref{fig:hq_people}), типовых филиалов
+(Рисунок\;\ref{fig:filial_people}), типовых складов
+(Рисунок\;\ref{fig:warehouse_people}) представлены ниже. Как следует
+из схем предполагается, что все филиалы и склады данного предприятия
+являются типовыми, то есть имеют одинаковую структуру вне зависимости от
+их расположения. Выделение количества АРМ (автоматизированных рабочих
+мест) для АХО (административно-хозяйственного отдела) и отдела
+безопасности исходит из посменного графика работы данных
+работников. Для складов предполагается, что АРМ требуется только главе
+текущей бригады работников склада, а также отделу безопасности, в то
+время как остальные работники будут использовать беспроводные
+устройства для связи, что в рамках данной работы не
+рассматривается. По требованиям к сети предполагается, что все
+работники, кроме начальства используют линии в 100 Мбит/с, в то время
+как руководство предприятия будет использовать линии в 1 Гбит/с в виду
+требований к IP-телефонии и видеоконференцсвязи.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{Warehouse_People}
+  \caption{Количество рабочих мест на типовом складе}
+  \label{fig:warehouse_people}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{HQ_People}
+  \caption{Количество рабочих мест в основном здании}
+  \label{fig:hq_people}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{Filial_People}
+  \caption{Количество рабочих мест в типовом филиале}
+  \label{fig:filial_people}
+\end{figure}
+
+\section{РАСЧЁТ ПРОПУСКНОЙ СПОСОБНОСТИ КАНАЛОВ ПЕРЕДАЧИ ДАННЫХ}
+В данном пункте следует произвести расчет пропускной способности
+каналов передачи данных с учетом применения трехуровневой архитектуры
+сети, состоящей из уровня доступа, агрегации и ядра.
+
+Расчет портов уровня доступа для основного здания
+(Таблица\;\ref{tab:hq_access_ports}) исходит из требований к сети
+которые были описаны в работе выше.
+\begin{table}[H]
+  \caption{Расчет портов уровня доступа для основного здания\label{tab:hq_access_ports}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|>{\hsize=1.1\hsize}s|>{\hsize=0.9\hsize}s|}
+    \hline
+    Название отдела & Количество АРМ & Требования к каналу передачи данных, Мбит/с & Суммарные требования на отдел, Мбит/с & Портов GigabitEthernet & Портов FastEthernet \\ \hline
+    Отдел ИТ        & 27             & 100                                         & 2700                                  & 0                      & 27                  \\ \hline
+    Бухгалтерия     & 11             & 100                                         & 1100                                  & 0                      & 11                  \\ \hline
+    Отдел кадров    & 11             & 100                                         & 1100                                  & 0                      & 11                  \\ \hline
+    Отдел закупок   & 11             & 100                                         & 1100                                  & 0                      & 11                  \\ \hline
+    Отдел продаж    & 11             & 100                                         & 1100                                  & 0                      & 11                  \\ \hline
+    АХО             & 1              & 100                                         & 100                                   & 0                      & 1                   \\ \hline
+    Дирекция        & 3              & 1000                                        & 3000                                  & 3                      & 0                   \\ \hline
+    Охрана          & 1              & 100                                         & 100                                   & 0                      & 1                   \\ \hline
+    Итого           & 76             & \multicolumn{2}{s|}{-}                                                              & 3                      & 73                  \\ \hline
+  \end{tabularx}
+\end{table}
+
+Для уровня агрегации расчет исходит с учетом резервирования портов
+(Таблица\;\ref{tab:hq_agregation_ports}). Также в качестве
+коэффициента перехода объема трафика на уровень агрегации для всех
+зданий было взято 40\%, так как узлы не будут постоянно использовать
+весь канал передачи данных из-за того, что основным сервисом является
+программное обеспечение 1С: Предприятие, которое не требует особых
+требований к постоянному широкополосному каналу передачи
+данных. Количество портов на уровне ядра будет совпадать с уровнем
+агрегации.
+
+\begin{table}[H]
+  \caption{Расчет портов уровня агрегации для основного здания\label{tab:hq_agregation_ports}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|s|s|}
+    \hline
+    Название отдела & Суммарные требования на отдел, Мбит/с & Объем трафика при переходе на уровень агрегации & Количество портов на уровне агрегации, GigabitEthernet \\ \hline
+    Отдел ИТ        & 2700                                  & 1080                                            & 2 + 2 \\ \hline
+    Бухгалтерия     & 1100                                  & 440                                             & 1 + 1 \\ \hline
+    Отдел кадров    & 1100                                  & 440                                             & 1 + 1 \\ \hline
+    Отдел закупок   & 1100                                  & 440                                             & 1 + 1 \\ \hline
+    Отдел продаж    & 1100                                  & 440                                             & 1 + 1 \\ \hline
+    АХО             & 100                                   & 40                                              & 1 + 1 \\ \hline
+    Дирекция        & 3000                                  & 1200                                            & 2 + 2 \\ \hline
+    Охрана          & 100                                   & 40                                              & 1 + 1 \\ \hline
+    Итого           & -                                     & 4120                                            & 20 \\ \hline
+  \end{tabularx}
+\end{table}
+
+Расчет портов уровня доступа и агрегации для типовых филиалов выполнен
+аналогично основному зданию и представлен на
+Таблицах\;\ref{tab:filial_access_ports}~---~\ref{tab:filial_agregation_ports}. Главным
+отличием является факт отсутствия отдела ИТ на данных
+площадках. Требования по пропускной способности, а также коэффициент
+перехода на уровень агрегации и уровень резервирования остаются теми
+же.
+
+\begin{table}[H]
+  \caption{Расчет портов уровня доступа для филиала\label{tab:filial_access_ports}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|>{\hsize=1.1\hsize}s|>{\hsize=0.9\hsize}s|}
+    \hline
+    Название отдела & Количество АРМ & Требования к каналу передачи данных, Мбит/с & Суммарные требования на отдел, Мбит/с & Портов GigabitEthernet & Портов FastEthernet \\ \hline
+    Бухгалтерия     & 5              & 100                                         & 500                                   & 1                      & 5                   \\ \hline
+    Отдел кадров    & 2              & 100                                         & 200                                   & 1                      & 2                   \\ \hline
+    Отдел закупок   & 9              & 100                                         & 900                                   & 1                      & 9                   \\ \hline
+    Отдел продаж    & 10             & 100                                         & 1000                                  & 1                      & 10                  \\ \hline
+    АХО             & 1              & 100                                         & 100                                   & 1                      & 1                   \\ \hline
+    Дирекция        & 3              & 1000                                        & 3000                                  & 3                      & 30                  \\ \hline
+    Итого           & 30             & \multicolumn{2}{s|}{-}                                                              & 8                      & 57                  \\ \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption{Расчет портов уровня агрегации для филиала\label{tab:filial_agregation_ports}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|s|s|}
+    \hline
+    Название отдела & Суммарные требования на отдел, Мбит/с & Объем трафика при переходе на уровень агрегации & Количество портов на уровне агрегации, GigabitEthernet \\ \hline
+    Бухгалтерия     & 500                                   & 200                                             & 1 + 1 \\ \hline
+    Отдел кадров    & 200                                   & 80                                              & 1 + 1 \\ \hline
+    Отдел закупок   & 900                                   & 360                                             & 1 + 1 \\ \hline
+    Отдел продаж    & 1000                                  & 440                                             & 1 + 1 \\ \hline
+    АХО             & 100                                   & 40                                              & 1 + 1 \\ \hline
+    Дирекция        & 3000                                  & 1200                                            & 2 + 2 \\ \hline
+    Итого           & -                                     & 2320                                            & 14 \\ \hline
+  \end{tabularx}
+\end{table}
+
+Для типовых складов использование трехуровневой архитектуры сети
+нецелесообразно в виду крайне малого количества конечных устройств (их
+всего 5). Поэтому расчет пропускной способности сети будет идти без
+перехода на уровень агрегации. Требуемая пропускная способность
+типового склада представлена в Формуле\;\ref{eq:warehouse_capacity}.
+\begin{equation}\label{eq:warehouse_capacity}
+  p = 5 * 100 \frac{\text{Мбит}}{\text{c}} = 500 \frac{\text{Мбит}}{\text{с}}.
+\end{equation}
+
+Таким образом требуется 5 портов FastEthernet для обеспечения
+пропускной способности сети типового склада. Поскольку на складах не
+используется трехуровневая архитектура сети, то скорее всего будет
+использоваться один маршрутизатор, который будет подключен ко всем
+конечным устройствам пользователей. Поэтому использование
+резервирования в данном случае нецелесообразно и невозможно, поскольку
+в рамках программного обеспечения Cisco Packet Tracer можно подключить
+только один сетевой порт на персональный компьютер.
+
+\section{ПРОТОТИПИРОВАНИЕ СЕТИ}
+В данном шаге требуется создать прототип сети с учетом
+предварительного планирования количество портов, политик
+резервирования, добавления сервера для развертывания программной
+инфраструктуры предприятия, трехуровневой архитектуры сети, полученных
+в предыдущем пункте работы.
+
+Спецификация промежуточных устройств прототипа сети исходит из
+доступных устройств в Cisco Packet Tracer. Спецификация для основного
+офиса представлена на Таблице\;\ref{tab:hq_device_spec}. В данном
+случае используется два маршрутизатора для дополнительного
+резервирования подключения к провайдеру сети. Также для соблюдения
+требований по пропускной способности сети для руководства будет
+использоваться коммутатор L3 из-за недостаточного количества портов
+GigabitEthernet на доступных L2 коммутаторах.
+
+Помимо руководства L3 коммутатор потребуется для сервера. Данное
+решение позволит соблюдать трехуровневую архитектуру сети, а также
+даст возможности для масштабирования сети (можно будет подключать
+сразу несколько серверов).
+
+Для остальных конечных устройств L2 коммутаторов будет
+достаточно. Количество требуемых коммутаторов L2 рассчитано в
+Формуле\;\ref{eq:l2_comm_count}.
+
+\begin{equation}
+  \label{eq:l2_comm_count}
+  p = \frac{73 \text{порта}}{24 \text{порта}} \approx 3.042
+\end{equation}
+
+Таким образом потребовалось бы 4 коммутатора L2 для подключения всех
+конечных устройств пользователей, однако на L3 коммутаторе, который
+подключен к руководству, имеется достаточно свободных портов для
+подключения конечных устройств, поэтому можно воспользоваться тремя
+коммутаторами L2.
+
+\begin{landscape}\pagestyle{empty}\newpage
+\begin{table}[H]
+  \caption{Спецификация промежуточных устройств прототипа сети основного здания\label{tab:hq_device_spec}}
+  \centering
+  \small
+  \begin{tabulary}{\linewidth}{|L|L|L|L|L|L|}
+    \hline
+    Модель устройства       & Имя устройства                                     & Модули расширения & Общее количество портов (с модулями расширения) & Используемые порты (названия, количество)                        & Свободные порты (названия количество) \\ \hline
+    Маршрутизатор 4331      & R\allowbreak\_1\allowbreak\_IVANOV                 & -                 & 3 порта GigabitEthernet                         & 3 порта: GigabitEthernet0/0/0-0/0/2                              & 0 портов \\ \hline
+    Маршрутизатор 4331      & R\allowbreak\_2\allowbreak\_IVANOV                 & -                 & 3 порта GigabitEthernet                         & 3 порта: GigabitEthernet0/0/0-0/0/2                              & 0 портов \\ \hline
+    Коммутатор L3 3650 24PS & SW\allowbreak\_1\allowbreak\_L3\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 10 портов: GigabitEthernet1/0/1-1/0/10                           & 14 портов: GigabitEthernet1/0/11-1/0/24 \\ \hline
+    Коммутатор L3 3650 24PS & SW\allowbreak\_2\allowbreak\_L3\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 10 портов: GigabitEthernet1/0/1-1/0/10                           & 14 порта: GigabitEthernet1/0/11-1/0/24 \\ \hline
+    Коммутатор 2960         & SW\allowbreak\_1\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта FastEthernet, 2 порта GigabitEthernet  & 24 порта: FastEthernet0/1-0/24, 2 порта: GigabitEthernet0/1-0/2  & 0 портов \\ \hline
+    Коммутатор 2960         & SW\allowbreak\_2\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта FastEthernet, 2 порта GigabitEthernet  & 13 портов: FastEthernet0/1-0/13, 2 порта: GigabitEthernet0/1-0/2 & 11 портов: FastEthernet0/14-0/24 \\ \hline
+    Коммутатор L3 3650 24PS & SW\allowbreak\_3\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 23 порта: GigabitEthernet1/0/1-1/0/23                            & 1 порт: GigabitEthernet1/0/24 \\ \hline
+    Коммутатор 2960         & SW\allowbreak\_4\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта FastEthernet, 2 порта GigabitEthernet  & 22 порта: FastEthernet0/1-0/22, 2 порта: GigabitEthernet0/1-0/2  & 2 порта: FastEthernet0/23-0/24 \\ \hline
+    Коммутатор L3 3650 24PS & SW\allowbreak\_5\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 3 порта: GigabitEthernet1/0/1-1/0/3                              & 21 порт: GigabitEthernet1/0/4-1/0/24 \\ \hline
+  \end{tabulary}
+\end{table}
+\end{landscape}\pagestyle{plain}\newpage
+
+При построении логической топологии сети основного здания
+(Рисунок\;\ref{fig:hq_topology}) требования к пропускной способности
+сервера были взяты как 1 Гбит/с, однако расчет реальных требований
+будет выполнен далее. Также в качестве типа подключения между
+коммутаторами L3 использовалась топология <<кольцо>>. Для соединения между коммутаторами L2 от руководства компании сделаны 3 линии GigabitEthernet (2 для соблюдения пропускной способности, 1 --- резервная).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Topology_HQ}
+  \caption{Топология сети основного здания}
+  \label{fig:hq_topology}
+\end{figure}
+
+План подключений оборудования по портам для основного здания
+представлен на Таблице\;\ref{tab:hq_connection_plan}.
+
+\begin{table}[H]
+  \caption{План подключений оборудования по портам для основного здания\label{tab:hq_connection_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    Название устройства & Порт                         & Описание подключения                      \\ \hline
+    R\_1\_IVANOV        & GigabitEthernet0/0/0         & R\_2\_IVANOV                              \\ \cline{2-3}
+                        & GigabitEthernet0/0/1         & SW\_1\_L3\_IVANOV                         \\ \cline{2-3}
+                        & GigabitEthernet0/0/2         & SW\_2\_L3\_IVANOV                         \\ \hline
+    R\_2\_IVANOV        & GigabitEthernet0/0/0         & R\_1\_IVANOV                              \\ \cline{2-3}
+                        & GigabitEthernet0/0/1         & SW\_2\_L3\_IVANOV                         \\ \cline{2-3}
+                        & GigabitEthernet0/0/2         & SW\_1\_L3\_IVANOV                         \\ \hline
+    SW\_1\_L3\_IVANOV   & GigabitEthernet1/0/1-1/0/7   & SW\_1-5\_L2\_IVANOV                       \\ \cline{2-3}
+                        & GigabitEthernet1/0/8         & SW\_2\_L3\_IVANOV                         \\ \cline{2-3}
+                        & GigabitEthernet1/0/9-1/0/10  & R\_1-2\_IVANOV                            \\ \hline
+    SW\_2\_L3\_IVANOV   & GigabitEthernet1/0/1-1/0/7   & SW\_1-5\_L2\_IVANOV                       \\ \cline{2-3}
+                        & GigabitEthernet1/0/8         & SW\_1\_L3\_IVANOV                         \\ \cline{2-3}
+                        & GigabitEthernet1/0/9-1/0/10  & R\_1-2\_IVANOV                            \\ \hline
+    SW\_1\_L2\_IVANOV   & FastEthernet0/1-0/24         & PC\_1-24\_ИТ\_IVANOV                      \\ \cline{2-3}
+                        & GigabitEthernet0/1-0/2       & SW\_1-2\_L3\_IVANOV                       \\ \hline
+    SW\_2\_L2\_IVANOV   & FastEthernet0/1-0/13         & PC\_1\_BUKH\_IVANOV - PC\_1\_SEC\_IVANOV  \\ \cline{2-3}
+                        & GigabitEthernet0/1-0/2       & SW\_1-2\_L3\_IVANOV                       \\ \hline
+    SW\_3\_L2\_IVANOV   & GigabitEthernet1/0/1-1/0/17  & PC\_1\_HR\_IVANOV - PC\_3\_RULE\_IVANOV   \\ \cline{2-3}
+                        & GigabitEthernet1/0/18-1/0/21 & SW\_1-2\_L3\_IVANOV                       \\ \hline
+    SW\_4\_L2\_IVANOV   & FastEthernet0/1-0/22         & PC\_1\_SELL\_IVANOV - PC\_11\_BUY\_IVANOV \\ \cline{2-3}
+                        & GigabitEthernet0/1-0/2       & SW\_1-2\_L3\_IVANOV                       \\ \hline
+    SW\_5\_L2\_IVANOV   & GigabitEthernet1/0/1         & SERV\_1\_IVANOV                           \\ \cline{2-3}
+                        & GigabitEthernet1/0/2-1/0/3   & SW\_1-2\_L3\_IVANOV                       \\ \hline
+  \end{tabularx}
+\end{table}
+
+
+Проектирование логической топологии устройства
+(Рисунок\;\ref{fig:filial_topology}) аналогично топологии основного
+здания. Спецификация промежуточных устройств, а также план подключения
+оборудования по портам представлены на
+Таблицах\;\ref{tab:filial_device_spec}~---~\ref{tab:filial_connection_plan}.
+
+\begin{landscape}\pagestyle{empty}\newpage
+\begin{table}[H]
+  \caption{Спецификация промежуточных устройств прототипа сети типового филиала\label{tab:filial_device_spec}}
+  \centering
+  \small
+  \begin{tabulary}{\linewidth}{|L|L|L|L|L|L|}
+    \hline
+        Модель устройства       & Имя устройства                                     & Модули расширения & Общее количество портов (с модулями расширения) & Используемые порты (названия, количество)                            & Свободные порты (названия количество) \\ \hline
+        Машрутизатор 4331       & R\allowbreak\_1\allowbreak\_IVANOV                 & -                 & 3 порта GigabitEthernet                         & 3 порта: GigabitEthernet0/0/0-0/0/2                                  & 0 портов \\ \hline
+        Машрутизатор 4331       & R\allowbreak\_2\allowbreak\_IVANOV                 & -                 & 3 порта GigabitEthernet                         & 3 порта: GigabitEthernet0/0/0-0/0/2                                  & 0 портов \\ \hline
+        Коммутатор L3 3650 24PS & SW\allowbreak\_1\allowbreak\_L3\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 7 портов: GigabitEthernet1/0/1 - 1/0/7                               & 14 портов: GigabitEthernet1/0/8 - 1/0/24 \\ \hline
+        Коммутатор L3 3650 24PS & SW\allowbreak\_2\allowbreak\_L3\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 7 портов: GigabitEthernet1/0/1 - 1/0/7                               & 14 портов: GigabitEthernet1/0/8 - 1/0/24 \\ \hline
+        Коммутатор L3 3650 24PS & SW\allowbreak\_1\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 16 портов: GigabitEthernet1/0/1 - 1/0/14                             & 10 портов: GigabitEthernet1/0/15 - 1/0/24 \\ \hline
+        Коммутатор 2960         & SW\allowbreak\_2\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта FastEthernet, 2 порта GigabitEthernet  & 20 портов: FastEthernet0/1 - 0/20, 2 порта: GigabitEthernet0/1 - 0/2 & 4 порта: FastEthernet0/21-0/24 \\ \hline
+        Коммутатор L3 3650 24PS & SW\allowbreak\_1\allowbreak\_L2\allowbreak\_IVANOV & -                 & 24 порта GigabitEthernet                        & 3 порта: GigabitEthernet1/0/1 - 1/0/3                                & 21 порт: GigabitEthernet1/0/4 - 1/0/24 \\ \hline
+  \end{tabulary}
+\end{table}
+\end{landscape}\pagestyle{plain}\newpage
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{Topology_FILIAL}
+  \caption{Топология сети типового филиала}
+  \label{fig:filial_topology}
+\end{figure}
+
+
+\begin{table}[H]
+  \caption{План подключений оборудования по портам для типового филиала\label{tab:filial_connection_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    Название устройства                & Порт                         & Описание подключения \\ \hline
+    R\_1\_IVANOV      & GigabitEthernet0/0/0         & R\_2\_IVANOV         \\ \cline{2-3}
+                                       & GigabitEthernet0/0/1         & SW\_1\_L3\_IVANOV    \\ \cline{2-3}
+                                       & GigabitEthernet0/0/2         & SW\_2\_L3\_IVANOV    \\ \hline
+    R\_2\_IVANOV      & GigabitEthernet0/0/0         & R\_1\_IVANOV         \\ \cline{2-3}
+                                       & GigabitEthernet0/0/1         & SW\_1\_L3\_IVANOV    \\ \cline{2-3}
+                                       & GigabitEthernet0/0/2         & SW\_2\_L3\_IVANOV    \\ \hline
+    SW\_2\_L3\_IVANOV & GigabitEthernet1/0/1 - 1/0/3 & SW\_1\_L2\_IVANOV    \\ \cline{2-3}
+                                       & GigabitEthernet1/0/4         & SW\_2\_L2\_IVANOV    \\ \cline{2-3}
+                                       & GigabitEthernet1/0/5         & SW\_3\_L2\_IVANOV    \\ \cline{2-3}
+                                       & GigabitEthernet1/0/6         & R\_1\_IVANOV         \\ \cline{2-3}
+                                       & GigabitEthernet1/0/7         & R\_2\_IVANOV         \\ \cline{2-3}
+                                       & GigabitEthernet1/0/8         & SW\_1\_L3\_IVANOV    \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:filial_connection_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    SW\_1\_L2\_IVANOV & GigabitEthernet1/0/1-1/0/10    & PC\_1\_RULE\_IVANOV - PC\_5\_BUKH\_IVANOV \\ \cline{2-3}
+                                       & GigabitEthernet1/0/11 - 1/0/12 & SW\_1-2\_L3\_IVANOV                       \\ \hline
+    SW\_2\_L2\_IVANOV & FastEthernet0/1-0/20           & PC\_1\_BUY\_IVANOV - PC\_1\_AHO\_IVANOV   \\ \cline{2-3}
+                                       & GigabitEthernet0/1 - 0/2       & SW\_1-2\_L3\_IVANOV                       \\ \hline
+    SW\_3\_L2\_IVANOV & GigabitEthernet1/0/1           & SERV\_1\_IVANOV                           \\ \cline{2-3}
+                                       & GigabitEthernet1/0/2 - 1/0/3   & SW\_1-2\_L3\_IVANOV                       \\ \hline
+  \end{tabularx}
+\end{table}
+
+Как уже было сказано ранее в рамках типового склада было принято
+решение отказа от трехуровневой топологии сети ввиду крайне малого
+количества конечных устройств.
+
+Логическая топология типового склада представлена на
+Рисунке\;\ref{fig:warehouse_topology}. В данной топологии используется
+только одно сетевое устройство --- маршрутизатор, к которому напрямую
+подключены конечные устройства площадки. В качестве маршрутизатора
+R\_1\_IVANOV используется модель 1841 с одним модулем расширения
+HWIC-4ESW, что позволяет подключить 5 портов FastEthernet к конечным
+устройствам и иметь один свободный порт FastEthernet.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Topology_WAREHOUSE}
+  \caption{Топология сети типового склада}
+  \label{fig:warehouse_topology}
+\end{figure}
+
+План подключений подключений по портам представлен на Таблице\;\ref{tab:warehouse_connection_plan}.
+\begin{table}[H]
+  \caption{План подключений оборудования по портам типового склада\label{tab:warehouse_connection_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    Название устройства & Порт            & Описание подключения \\ \hline
+    R\_1\_IVANOV        & FastEthernet0-5 & PC\_1\_SEC\_IVANOV - PC\_1\_BRIG\_IVANOV \\ \hline
+  \end{tabularx}
+\end{table}
+
+\section{ПЛАНИРОВАНИЕ СЕТИ УРОВНЯ 2}
+Следующий этап планирования производится на уровне 2 – проектирование
+виртуальных локальных сетей. Виртуальные локальные сети можно
+разделить на сервисные VLAN, управляющие VLAN и взаимосвязанные VLAN.
+
+При проектировании сервисной виртуальной локальной сети следует
+руководствоваться тем, что она предназначена для обеспечения
+доступности сервисов для пользователей. Данные VLAN можно назначать на
+основе следующих критериев:
+\begin{itemize}
+\item назначение VLAN по географическому местоположению;
+\item назначение VLAN по логической области;
+\item назначение VLAN в зависимости от структуры персонала;
+\item назначение VLAN по типу услуги.
+\end{itemize}
+
+В рамках данной работы оптимальным критерием является назначение в
+зависимости от структура персонала. Планирование VLAN для головного
+офиса представлено на Таблице\;\ref{tab:hq_vlan_plan}. Типовые филиалы
+имеют аналогичную структуру персонала, поэтому планирование VLAN будет
+аналогичным, а для типовых складов не имеет смысла в виду отсутсвия
+коммутаторов.
+
+\begin{table}[H]
+  \caption{Планирование VLAN для головного офиса\label{tab:hq_vlan_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    Идентификатор VLAN & Имя VLAN                & Описание \\ \hline
+    101                & ИТ                      & VLAN ИТ-службы \\ \hline
+    102                & Sells                   & VLAN Отдела продаж \\ \hline
+    103                & Stocks                  & VLAN Отдела закупок \\ \hline
+    104                & Accouting               & VLAN Бухгалтерии \\ \hline
+    105                & HR                      & VLAN Отдела кадров \\ \hline
+    106                & Heads                   & VLAN Руководства \\ \hline
+    107                & AHO                     & VLAN АХО \\ \hline
+    108                & Security                & VLAN Отдела безопасности \\ \hline
+    109                & Server                  & VLAN управления сервером \\ \hline
+    110                & Managment\_L2           & VLAN управления устройствами уровня 2 \\ \hline
+    111                & Managment\_L3           & VLAN управления устройствами уровня 3 \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:hq_vlan_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    112                & Interconnected\_SW1\_R1 & Взаимосвязанная VLAN между SW\_1\_L3\_IVANOV и R\_1\_IVANOV \\ \hline
+    113                & Interconnected\_SW2\_R1 & Взаимосвязанная VLAN между SW\_2\_L3\_IVANOV и R\_1\_IVANOV \\ \hline
+    114                & Interconnected\_SW1\_R2 & Взаимосвязанная VLAN между SW\_1\_L3\_IVANOV и R\_2\_IVANOV \\ \hline
+    115                & Interconnected\_SW2\_R2 & Взаимосвязанная VLAN между SW\_2\_L3\_IVANOV и R\_2\_IVANOV \\ \hline
+  \end{tabularx}
+\end{table}
+
+Планирование VLAN по портам (Таблица\;\ref{tab:hq_vlan_port_plan})
+происходит исходя из логического разделения по отделам, а также
+возможности доступа к устройствам уровня 2. Управление всеми сетевыми устройствами
+ будет происходить по протоколу SSH\cite{ssh-cisco}.
+
+\begin{table}[H]
+  \caption{Планирование VLAN по портам для головного офиса\label{tab:hq_vlan_port_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|s|}
+    \hline
+    Название устройства                                & Порт                          & Описание подключения                                                                                       & \multicolumn{2}{s|}{VLAN} \\ \cline{4-5}
+                                                       &                               &                                                                                                            & Access        & Trunk     \\ \hline
+    SW\allowbreak\_1\allowbreak\_L2\allowbreak\_IVANOV & FastEthernet 0/1-0/24         & PC\allowbreak\_1-24\allowbreak\_ИТ\allowbreak\_IVANOV                                                      & 101           &           \\ \cline{2-5}
+                                                       & GigabitEthernet 0/1-0/2       & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV                                                       &               & 101 - 115   \\ \hline
+    SW\allowbreak\_2\allowbreak\_L2\allowbreak\_IVANOV & FastEthernet 0/1-0/13         & PC\allowbreak\_1\allowbreak\_BUKH\allowbreak\_IVANOV - PC\allowbreak\_1\allowbreak\_SEC\allowbreak\_IVANOV & 104, 107, 108 &           \\ \cline{2-5}
+                                                       & GigabitEthernet 0/1-0/2       & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV                                                       &               & 101 - 115 \\ \hline
+    SW\allowbreak\_3\allowbreak\_L2\allowbreak\_IVANOV & GigabitEthernet 1/0/1-1/0/17  & PC\allowbreak\_1\allowbreak\_HR\allowbreak\_IVANOV - PC\allowbreak\_3\allowbreak\_RULE\allowbreak\_IVANOV  & 101, 105, 106 &           \\ \cline{2-5}
+                                                       & GigabitEthernet 1/0/18-1/0/21 & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV                                                       &               & 101 - 115 \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:hq_vlan_port_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|s|}
+    \hline
+    SW\allowbreak\_4\allowbreak\_L2\allowbreak\_IVANOV & FastEthernet 0/1-0/22         & PC\allowbreak\_1\allowbreak\_SELL\allowbreak\_IVANOV - PC\allowbreak\_11\allowbreak\_BUY\allowbreak\_IVANOV & 102, 103      & \\ \cline{2-5}
+                                                                        & GigabitEthernet 0/1-0/2       & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV                                                        &               & 101 - 115 \\ \hline
+    SW\allowbreak\_5\allowbreak\_L2\allowbreak\_IVANOV & GigabitEthernet 1/0/1         & SERV\allowbreak\_1\allowbreak\_IVANOV                                                                       & 109           & \\ \cline{2-5}
+                                                                        & GigabitEthernet 1/0/1 - 1/0/2 & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV                                                        &               & 101 - 115 \\ \hline
+    SW\allowbreak\_1\allowbreak\_L3\allowbreak\_IVANOV & GigabitEthernet 1/0/1-1/0/7   & SW\allowbreak\_1-5\allowbreak\_L2\allowbreak\_IVANOV                                                        &               & 101-111 \\ \cline{2-5}
+                                                                        & GigabitEthernet 1/0/8         & SW\allowbreak\_2\allowbreak\_L3\allowbreak\_IVANOV                                                          &               & 101 - 115 \\ \cline{2-5}
+                                                                        & GigabitEthernet 1/0/9-1/0/10  & R\allowbreak\_1-2\allowbreak\_IVANOV                                                                        &               & 101 - 115 \\ \hline
+    SW\allowbreak\_2\allowbreak\_L3\allowbreak\_IVANOV & GigabitEthernet 1/0/1-1/0/7   & SW\allowbreak\_1-5\allowbreak\_L2\allowbreak\_IVANOV                                                        &               & 101-111 \\ \cline{2-5}
+                                                                        & GigabitEthernet 1/0/8         & SW\allowbreak\_1\allowbreak\_L3\allowbreak\_IVANOV                                                          &               & 101 - 115 \\ \cline{2-5}
+                                                                        & GigabitEthernet 1/0/9-1/0/10  & R\allowbreak\_1-2\allowbreak\_IVANOV                                                                        &               & 101 - 115 \\ \hline
+    R\allowbreak\_1\allowbreak\_IVANOV & GigabitEthernet 0/0/1-0/0/2 & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV &  & \\ \cline{2-5}
+                                                        & GigabitEthernet 0/0/0       & R\allowbreak\_2\allowbreak\_IVANOV                   &  & \\ \hline
+    R\allowbreak\_2\allowbreak\_IVANOV & GigabitEthernet 0/0/1-0/0/2 & SW\allowbreak\_1-2\allowbreak\_L3\allowbreak\_IVANOV &  & \\ \cline{2-5}
+                                                        & GigabitEthernet 0/0/0       & R\allowbreak\_1\allowbreak\_IVANOV                   &  & \\ \hline
+  \end{tabularx}
+\end{table}
+
+Также для увеличения пропускной способности сети и увеличения
+надежности сети путем резервирование будет использоваться
+агрегирование каналов Ethernet. Для этой задачи как раз и были
+выделены такое большое количество каналов на уровне агрегирования и
+ядра (Рисунок\;\ref{fig:hq_topology}). Однако резервный канал можно
+создать только между коммутаторами L3 и коммутатору SW\_3\_L2\_IVANOV,
+поскольку было использовано максимальное количество портов на
+маршрутизаторах (данные каналы будут агрегироваться для увеличения
+пропускной способности).
+
+Планирование сетей уровня 2 для типового филиала аналогично
+планированию для головного офиса, без выделения VLAN для ИТ-службы,
+т.к. её нет в филиалах. Остальные сети VLAN аналогичны основному
+зданию, и будут иметь те же идентификаторы, что и в основном здании.
+
+Для типового склада планирование сети VLAN нецелесообразно, поскольку
+в топологии сети типовых складов используются только один
+маршрутизатор.
+
+Для предотвращения петель уровня 2 будет использоваться протокол
+PVST\cite{stp-for-small} в виду его возможности работы с VLAN. Данная
+особенность позволяет создавать индивидуальные настройки для каждого
+VLAN, а также сделать в будущем балансировку нагрузки (при текущих
+требованиях предприятия она не требуется).  Корневым мостом будет
+является коммутатор SW\_1\_L3\_IVANOV с доступом ко всем
+пользовательским VLAN, в то время как SW\_2\_L3\_IVANOV будет
+резервным корневым мостом. Аналогично для филиала и нецелесообразно
+для склада.
+
+Также для соблюдения пропускной способности для руководства необходимо
+использовать агрегирование каналов. Для этого можно воспользоваться
+технологией Etherchannel\cite{cisco-etherchannel}. В качестве
+протокола агрегации будет использоваться LACP. Планирование
+агрегации каналов для основного здания и филиала представлены в
+Таблицах\;\ref{tab:hq_aggregation_plan}~---~\ref{tab:filial_aggregation_plan}.
+
+\begin{table}[H]
+  \caption{Планирование агрегации каналов для основного здания\label{tab:hq_aggregation_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline Устройство в активном режиме & Используемые порты              & Устройство в пассивном режиме работы \\ \hline
+    SW\_3\_L2\_IVANOV                   & GigabitEthernet 1/0/18 - 1/0/20 & SW\_1\_L3\_IVANOV                    \\ \cline{2-3}
+                                        & GigabitEthernet 1/0/21 - 1/0/23 & SW\_2\_L3\_IVANOV                    \\ \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption{Планирование агрегации каналов для типового филиала\label{tab:filial_aggregation_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline Устройство в активном режиме & Используемые порты              & Устройство в пассивном режиме работы \\ \hline
+    SW\_1\_L2\_IVANOV                   & GigabitEthernet 1/0/11 - 1/0/12 & SW\_1\_L3\_IVANOV                    \\ \cline{2-3}
+                                        & GigabitEthernet 1/0/13 - 1/0/16 & SW\_2\_L3\_IVANOV                    \\ \hline
+  \end{tabularx}
+\end{table}
+\section{ПЛАНИРОВАНИЕ СЕТИ УРОВНЯ 3}
+
+Следующий этап планирования сети --- проектирование распределения
+IP-адресов. В качестве диапазона частных адресов был выбран класс C
+для каждой из площадок в виду небольшого количества пользователей
+(максимальное число адресов хостов --- 256, максимальное количество
+конечных устройств --- 77 c учетом сервера). 
+
+Планирование адресации для головного офиса представлено в
+Таблице\;\ref{tab:hq_ip_plan}.
+
+\begin{table}[H]
+  \caption{Планирование адресации для головного офиса\label{tab:hq_ip_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|>{\hsize=0.7\hsize}s|>{\hsize=0.6\hsize}s|>{\hsize=1.7\hsize}s|}
+    \hline
+    Сегмент/маска IP-сети & Адрес шлюза     & Описание сегмента сети \\ \hline
+    192.168.101.0/24      & 192.168.101.254 & Сегмент сети, к которому относятся ИТ-служба, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.102.0/24      & 192.168.102.254 & Сегмент сети, к которому относятся отдел продаж, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.103.0/24      & 192.168.103.254 & Сегмент сети, к которому относятся отдел закупок, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.104.0/24      & 192.168.104.254 & Сегмент сети, к которому относятся бухгалтерия, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.105.0/24      & 192.168.105.254 & Сегмент сети, к которому относятся отдел кадров, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.106.0/24      & 192.168.106.254 & Сегмент сети, к которому относятся руководство, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.107.0/24      & 192.168.107.254 & Сегмент сети, к которому относятся АХО, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.108.0/24      & 192.168.108.254 & Сегмент сети, к которому относятся отдел безопасности, со шлюзом, расположенным на коммутаторе уровня агрегации \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:hq_ip_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|>{\hsize=0.7\hsize}s|>{\hsize=0.6\hsize}s|>{\hsize=1.7\hsize}s|}
+    \hline
+    192.168.109.0/24 & 192.168.109.254 & Сегмент сети, к которому относятся сетевые сервисы, со шлюзом, расположенным на коммутаторе уровня агрегации \\ \hline
+    192.168.110.0/24 & 192.168.110.254 & Сегмент управляющей сети для устройств уровня 2 со шлюзом, расположенным на коммутаторе уровня агрегации     \\ \hline
+    192.168.111.0/24 &                 & Сегмент управляющей сети для устройств уровня 3                                                              \\ \hline
+    192.168.112.0/30 &                 & Сегмент сети между SW\_1\_L3\_IVANOV и R\_1\_IVANOV                                                          \\ \hline
+    192.168.113.0/30 &                 & Сегмент сети между SW\_2\_L3\_IVANOV и R\_1\_IVANOV                                                          \\ \hline
+    192.168.114.0/30 &                 & Сегмент сети между SW\_1\_L3\_IVANOV и R\_2\_IVANOV                                                          \\ \hline
+    192.168.115.0/30 &                 & Сегмент сети между SW\_2\_L3\_IVANOV и R\_2\_IVANOV                                                          \\ \hline
+    192.168.116.0/30 &                 & Сегмент сети между устройствами уровня ядра                                                                  \\ \hline
+    1.1.1.1/32       &                 & Адрес loopback-интерфейса для маршрутизатора R\_1\_IVANOV                                                    \\ \hline
+    2.2.2.2/32       &                 & Адрес loopback-интерфейса для маршрутизатора R\_2\_IVANOV                                                    \\ \hline
+  \end{tabularx}
+\end{table}
+
+Далее необходимо провести планирование режима распределения IP-адресов
+(Таблица\;\ref{tab:hq_dhcp_plan}). Для подсетей, которые назначены
+конечным устройствам пользователей, назначение будет происходить на
+коммутаторе агрегации при помощи DHCP. Для оставшихся подсетей
+распределение происходит статическим назначением адресов.
+
+\begin{table}[H]
+  \caption{Планирование режима распределения IP-адресов для головного офиса\label{tab:hq_dhcp_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    Сегмент/Интерфейс IP-сети & Режим распределения & Описание режима распределения \\ \hline
+    192.168.101.0/24 192.168.102.0/24 192.168.103.0/24 192.168.104.0/24 192.168.105.0/24 192.168.106.0/24 192.168.107.0/24 192.168.108.0/24  & DHCP & Распределяется коммутатором уровня агрегации \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:hq_dhcp_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|}
+    \hline
+    192.168.109.0/24 & Статический & Статически настроенные IP-адреса сетевых сервисов \\ \hline
+    192.168.110.0/24 & Статический & Статически настроенные IP-адреса управления устройствами уровня 2 \\ \hline
+    192.168.111.0/24 & Статический & Статически настроенные IP-адреса управления устройствами уровня 3 \\ \hline
+    192.168.112.0/30 & Статический & Статически настроенные взаимосвязанные IP-адреса первого коммутатора L3 с первым маршрутизатором \\ \hline
+    192.168.113.0/30 & Статический & Статически настроенные взаимосвязанные IP-адреса второго коммутатора L3 с первым маршрутизатором \\ \hline
+    192.168.114.0/30 & Статический & Статически настроенные взаимосвязанные IP-адреса первого коммутатора L3 со вторым маршрутизатором \\ \hline
+    192.168.115.0/30 & Статический & Статически настроенные взаимосвязанные IP-адреса второго коммутатора L3 со ввторым маршрутизатором \\ \hline
+    192.168.116.0/30 & Статический & Статически настроенные взаимосвязанные IP-адреса устройств уровня ядра \\ \hline
+  \end{tabularx}
+\end{table}
+
+После планирования распределения необходимо провести планирование
+маршрутизации (Таблица\;\ref{tab:level_3_summary}). В рамках данной
+работы глобальные сети не рассматриваются, поэтому рассматривается
+только проектирование внутренних маршрутов. Для устройств
+пользователей маршрут по умолчанию устанавливается посредством
+DHCP. Для коммутаторов и шлюзов будет использоваться статическая
+маршрутизация. Для устройств уровня ядра будет установлен статический
+маршрут по умолчанию, который будет перенапрвлять входящий трафик на
+loopback-интерфейсы устройств.
+
+\begin{table}[H]
+  \caption{Итоги сетевого планирования уровня 3\label{tab:level_3_summary}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    IP-сеть       & Метод назначения адреса, шлюз                                              & Режим маршрутизации                            & Описание сети      \\ \hline
+    192.168.101.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV & Анонсирование в OSPF через шлюзовые устройства & Сеть ИТ-службы     \\ \hhline{--~-}
+    192.168.102.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть отдела продаж \\ \hhline{--~-}
+    192.168.103.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть отдела закупок \\ \hhline{--~-}
+    192.168.104.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть бухгалтерии \\ \hhline{--~-}
+    192.168.105.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть отдела кадров \\ \hhline{--~-}
+    192.168.106.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть руководства \\ \hhline{--~-}
+    192.168.107.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть АХО \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:level_3_summary}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hhline{--~-}
+    192.168.108.0 & Назначение выполняет SW\_1\_L3\_IVANOV посредством DHCP, SW\_1\_L3\_IVANOV &                                                         & Сеть отдела безопасности \\ \hhline{--~-}
+    192.168.109.0 & Статические адреса, SW\_1\_L3\_IVANOV                                      &                                                         & Сеть сервера \\ \hline
+    192.168.110.0 & Статические адреса, SW\_1\_L3\_IVANOV                                      & Маршрут по умолчанию, направленный на SW\_1\_L3\_IVANOV & Сеть управления устройствами уровня 2 \\ \hline
+    192.168.111.0 & Статические адреса, шлюз не требуется & Включены OSPF и отношения соседства, маршрутизатор анонсирует маршрут по умолчанию & Сеть управления устройствами уровня 3 \\ \hline
+    192.168.112.0 & Статические адреса, шлюз не требуется & Включены OSPF и отношения соседства, маршрутизатор анонсирует маршрут по умолчанию & Сеть для организации связи между SW\_1\_L3\_IVANOV и R\_1\_IVANOV \\ \hline
+    192.168.113.0 & Статические адреса, шлюз не требуется & Включены OSPF и отношения соседства, маршрутизатор анонсирует маршрут по умолчанию & Сеть для организации связи между SW\_2\_L3\_IVANOV и R\_1\_IVANOV \\ \hline
+    192.168.114.0 & Статические адреса, шлюз не требуется & Включены OSPF и отношения соседства, маршрутизатор анонсирует маршрут по умолчанию & Сеть для организации связи между SW\_1\_L3\_IVANOV и R\_2\_IVANOV \\ \hline
+    192.168.115.0 & Статические адреса, шлюз не требуется & Включены OSPF и отношения соседства, маршрутизатор анонсирует маршрут по умолчанию & Сеть для организации связи между SW\_2\_L3\_IVANOV и R\_2\_IVANOV \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:level_3_summary}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    192.168.116.0 & Статические адреса, шлюз не требуется & Включены OSPF и отношения соседства, маршрутизатор анонсирует маршрут по умолчанию & Сеть для организации связи между маршрутизаторами \\ \hline
+  \end{tabularx}
+\end{table}
+
+Планирование сетей уровня 3 для типового филиала аналогично
+планированию для головного офиса за исключением ИТ-отдела, однако
+нумерация остается такой же, как и для основного офиса.
+
+Для типового склада планирование подсетей представлено в
+Таблице\;\ref{tab:warehouse_ip_plan}. Маска 24 для бригадира выделена
+по причине возможного увеличения количества пользователей в данном
+сегменте сети.
+
+\begin{table}[H]
+  \caption{Планирование адресации для головного офиса\label{tab:warehouse_ip_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|>{\hsize=0.7\hsize}s|>{\hsize=0.6\hsize}s|>{\hsize=1.7\hsize}s|}
+    \hline
+    Сегмент/маска IP-сети & Адрес шлюза     & Описание сегмента сети                                        \\ \hline
+    192.168.108.0/24      & 192.168.108.254 & Сегмент сети подключения отдела безопасности к маршрутизатору \\ \hline
+    192.168.109.0/24      & 192.168.109.254 & Сегмент сети подключения бригадира к маршрутизатору           \\ \hline
+  \end{tabularx}
+\end{table}
+
+Для типового склада планирование сетей уровня 3 представлено в
+Таблице\;\ref{tab:warehouse_level_3_summary}.
+
+\begin{table}[H]
+  \caption{Итоги сетевого планирования уровня 3\label{tab:warehouse_level_3_summary}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    IP-сеть       & Метод назначения адреса, шлюз & Режим маршрутизации       & Описание сети                    \\ \hline
+    192.168.108.0 & DHCP, R\_1\_IVANOV            & Статическая маршрутизация & Сеть отдела безопасности         \\ \hline
+    192.168.109.0 & DHCP, R\_1\_IVANOV            & Статическая маршрутизация & Сеть бригадира складского отдела \\ \hline
+  \end{tabularx}
+\end{table}
+
+\section{ПЛАНИРОВАНИЕ ПОЛИТИК ФИЛЬТРАЦИИ ТРАФИКА}
+В данном пункте работы необходимо провести планирование политик
+фильтрации трафика в формате списков контроля доступа.
+
+Схема доступа (Рисунок\;\ref{fig:access_diagram}) данного предприятия
+имеет следующую структуру: все отделы имеют доступ в ИТ-службу для
+удаленного доступа и администрирования ресурсов, а также все имеют
+доступ к сетевым службам, весь остальной доступ ограничен.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{access_diagram}
+  \caption{Схема доступа}
+  \label{fig:access_diagram}
+\end{figure}
+
+Списки контроля доступа для большинства отделов будут иметь одинаковый
+набор правил, который будет отличаться лишь IP-адресами
+источников. Исключением является только список контроля доступа для
+ИТ-службы. Все списки контроля доступа, кроме тех, которые относятся к
+политикам обеспечения качества обслуживания, будут установлены на
+коммутаторы уровня агрегации на виртуальные интерфейсы VLAN как
+входные. Пример набора правил для отдела продаж представлен на
+Листинге\;\ref{list:acl_sells}. Данный набор правил разрешает отправку
+пакетов из отдела продаж для последующего соединения к
+маршрутизаторам, а также сетевым службам сервера. Для типовых филиалов
+данное планирование аналогично, а для типовых складов нецелесообразно,
+поскольку управление доступом будет происходить при помощи статической
+маршрутизации сетевого устройства.
+
+\begin{lstlisting}[caption=Команды списков контроля доступа для отдела продаж\label{list:acl_sells}]
+ip access-list extended SELLS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.102.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.102.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.102.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.102.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.102.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 2049
+\end{lstlisting}
+
+Пример набора правил для ИТ-службы представлен на
+Листинге\;\ref{list:acl_it}. Данная служба должна иметь доступ ко всем
+сетевым устройствам для возможности удаленного управления и
+исправления ошибок на данных устройствах.
+\begin{lstlisting}[caption=Команды списков контроля доступа для ИТ-службы\label{list:acl_it}]
+ip access-list extended IT
+ permit udp any any eq bootps
+ permit udp host 192.168.101.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ospf any any
+\end{lstlisting}
+
+При данном планировании используются расширенные списки доступа,
+поскольку требуется ограничение по сетевым сервисам. Доступ имеют
+только используемые в данной работе сервисы, а также ИТ-служба.
+
+\section{ПЛАНИРОВАНИЕ ПОЛИТИК ОБЕСПЕЧЕНИЯ КАЧЕСТВА ОБСЛУЖИВАНИЯ}
+Политики обеспечения качества обслуживания в рамках данной работы
+будут реализовываться на основе определения нескольких классов сервиса
+и принадлежности трафика определенных сервисов к ним.
+
+Было определено четыре типа класса трафика в рамках работы:
+премиальный, золотой, серебряный, бронзовый. Трафик NFS будет
+считаться и обрабатываться как премиальный. Трафик веб-службы и службы
+управления пользователями как золотой. Серебрянный и бронзовый классы
+трафика будут содержать трафик служб динамического конфигурирования
+хостов и управления временем соответственно. Все остальное будет
+рассматриваться и обрабатываться по модели Best-effort.
+
+Значения DSCP\cite{dscp-value} для классов и типов трафика для
+основного здания указаны в Таблице\;\ref{tab:hq_dscp_plan}. Для
+типового филиала данные значения будут аналогичны, в то время как для
+типовых складов данное планирование неактуально.
+
+\begin{table}[H]
+  \caption{Значения DSCP для классов и типов трафика\label{tab:hq_dscp_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    Класс трафика & Тип трафика                                  & Модель поведения & Значение DSCP \\ \hline
+    Премиальный   & NFS                                          & EF               & 46            \\ \hline
+    Золотой       & Служба управления пользователями             & AF11             & 10            \\ \cline{2-4}
+                  & Веб-служба                                   & AF21             & 18            \\ \hline
+    Серебряный    & Служба динамического конфигурирования хостов & AF31             & 26            \\ \hline
+    Бронзовый     & Служба управления временем                   & AF41             & 34            \\ \hline
+  \end{tabularx}
+\end{table}
+
+Для определения соответствия типов пакетов с политиками обеспечения
+качества лучшим способом будет использование списков контроля
+доступа. Данные списки контроля доступа представлены в
+Приложении\;\ref{apx:qos_acl}.
+
+\section{ПЛАНИРОВАНИЕ СЛУЖБЫ ДОМЕННЫХ ИМЕН}
+Планирование службы доменных имен в рамках данной работы будет
+производится динамически при помощи сервиса управления пользователями
+FreeIPA. Назачение доменов представлено на
+Таблице\;\ref{tab:hq_dns_plan}. Как и для предыдущих пунктов работы
+планирование службы доменных имен аналогично для типового склада и
+неактуально для типового склада.
+\begin{table}[H]
+  \caption{Планирование доменов\label{tab:hq_dns_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|}
+    \hline
+    Домен & Описание домена \\ \hline
+    server.ivanov.test & Домен хоста, а также домен службы управления пользователями \\ \hline
+    nfs.ivanov.test & Домен файловой службы \\ \hline
+    ntp.ivanov.test & Домен службы времени \\ \hline
+    web.ivanov.test & Домен веб-сервера \\ \hline
+    rtp.ivanov.test & Домен устройств уровня ядра \\ \hline
+    sw.ivanov.test & Домен для коммутаторов \\ \hline
+  \end{tabularx}
+\end{table}
+
+Домены для коммутаторов и маршрутизаторов требуются для создания ключа
+RSA\cite{rsa}, который необходим для конфигурирования протокола
+SSH. Данные домены не будут иметь записей в DNS-сервере и будут
+использоваться локально в рамках устройства.
+
+Для службы динамического конфигурирования не требуется использование
+домена в виду структуры данного сервиса.
+
+Обратная зона DNS сервера будет настроена службой управления
+пользователей и будет ``109.168.192.in-addr.arpa''.
+
+\section{ПЛАНИРОВАНИЕ ПОЛИТИК УПРАВЛЕНИЯ ПОЛЬЗОВАТЕЛЯМИ}
+
+В данной работе в качестве службы управления пользователями будет
+использоваться FreeIPA. У FreeIPA есть несколько преимуществ, которые
+позволили выбрать именно данную службу для использования в данной
+курсовой работе:
+\begin{enumerate}
+\item Данный проект OpenSource, т.е. распротраняется под открытым
+  исходным кодом и является бесплатным.
+\item Данный проект использует стандартизированный набор сервисов
+  (Kerberos в качестве LDAP-сервера, Bind9 в качестве DNS службы).
+\item Данный проект разрабатывается гораздо активнее своих аналогов.
+\item Данный проект имеет интеграцию с Active Directory --- крайне
+  популярным аналогом, который специализируется на ОС Windows.
+\end{enumerate}
+
+Ключевым требованием сервера FreeIPA является использование
+RPM-основанных дистрибутивов Linux: Fedora, Red Hat Enterprise Linux,
+AstraLinux и\;т.д. В рамках данной работы был выбран дистрибутив
+Fedora Server 39 для использования в качестве серверной
+ОС. Минимальные требования по объему оперативной памяти составляют 1.2
+Гб, для 10000 пользователей 4 Гб. Поэтому для реального сервера будет
+достаточно 4 Гб оперативной памяти.
+
+В рамках данной работы потребуется использование встроенного DNS
+сервера FreeIPA. Также в FreeIPA есть встроенный изолированный сервис
+управления временем, однако в данной работе он будет развернут
+отдельно. 
+
+Помимо данных сервисов у FreeIPA есть непосредствено сервис
+аутентификации пользователей основанный на протоколе Kerberos, и
+LDAP-сервер ``389 Directory Server'', которые будут использоваться в
+данной работе в рамках планирования политик управления пользователями.
+
+Для более удобного управления и конфигурации у данного программного
+обеспечения доступен изолированный веб-сервер Apache с веб-интерфейсом
+управления FreeIPA. В нем будут сделаны настройки DNS-сервера, а также
+добавлены пользователи.
+
+\section{ПЛАНИРОВАНИЕ ВНЕДРЕНИЯ DHCP-СЕРВЕРА}
+
+При развертывании сервисов будет использоваться программное
+обеспечение (ПО) будет использоваться isc-dhcp-server. В Fedora Server
+39 пакет называется ``dhcp-server'' версии 4.4.3. В рамках топологии
+DHCP сервер будет развернут на сервере SERV\_1\_IVANOV. Благодаря
+использованию технологии VLAN, можно будет развернуть сразу несколько
+пулов подсетей. Пулы будут развернуты в соответствии с адресацией,
+которая описана в Таблице\;\ref{tab:hq_dhcp_plan}.
+
+Параметры для DHCP-сервера представлены в Таблице\;\ref{tab:hq_dhcp_conf}.
+\begin{table}[H]
+  \caption{Планирование DHCP-сервера\label{tab:hq_dhcp_conf}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|}
+    \hline
+    Параметр & Значение \\ \hline
+    Время аренды & 6000 \\ \hline
+    Максимальное время аренды & 7200 \\ \hline
+    IP-адрес DNS сервера & 192.168.109.1 \\ \hline
+  \end{tabularx}
+\end{table}
+
+Планирование DHCP-сервера аналогично для типового филиала и склада.
+
+В рамках развертывания сетевых служб для моделирования работы
+сервисов, будет развернут DHCP-сервер с сокращенной конфигурацией. В
+нем будет присутствовать только подсеть для выдачи адреса клиентской
+машине. Данная конфигурация представлена в Приложении\;\ref{apx:virtualbox}.
+
+Более полная конфигурация DHCP-сервера будет сделана уже в программном
+обеспечении Cisco Packet Tracer. Конфигурация для данного сервера
+представлена в Приложении\;\ref{apx:conf}.
+
+\section{ПЛАНИРОВАНИЕ ДРУГИХ СЕТЕВЫХ СЛУЖБ}
+
+В рамках данной работы также нужно сконфигурировать файловую службу
+NFS и службу управлением времени NTP.
+
+Параметры конфигурации NFS-сервера представлены на Таблице\;\ref{tab:hq_nfs_plan}.
+\begin{table}[H]
+\caption{Планирование NFS-сервера\label{tab:hq_nfs_plan}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{|s|s|}
+\hline
+/var/nfs/ & /home/<имя клиента>/nfs \\ \hline
+Доступ на запись и чтение & Доступ на чтение и запись \\ \hline
+Принудительная запись изменений на диск & Принудительная запись изменений на диск \\ \hline
+Предотвращение проверки вложенного дерева & Предотвращение проверки вложенного дерева \\ \hline
+ & Отсутствие преобразования запросов от root в запросы без привелегий \\ \hline
+\end{tabularx}
+\end{table}
+
+NFS-сервер будет доступен всем конечным пользователям данной сети. В
+качестве программного обеспечения требуется установить пакеты
+``nfs-utils'' на сервере и ``nfs-common'' на клиентских машинах.
+
+Служба управления временем NTP будет разворачиваться в рамках ПО
+``chrony''. Синхронизация времени будет происходить в соответствии
+внутреннем временем на системе сервера.
+
+В качестве веб-службы используется Apache. В отличии от другого
+популярного веб-сервера Nginx, система модулей Apache работает при
+помощи динамически\cite{apache-vs-nginx} загружаемых модулей. Также
+служба Apache использует распределенную\cite{apache-vs-nginx} систему
+конфигураций.
+
+Для проверки работоспособности, а также для дальнейшего расчета
+нагрузки был создан пример (Листинг\;\ref{list:html}) стартовой
+web-страницы компании. Название компании в качестве примера было взято
+<<ОптоХим>>.
+
+\begin{lstlisting}[caption=Стартовая страница компании\label{list:html}]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Оптовая торговля бытовой химией</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+\end{lstlisting}
+\begin{lstlisting}[title=Продолжение листинга\;\ref{list:html}]
+    <img src="optohim.png" alt="logo">
+    <header>
+        <h1>Оптовая торговля бытовой химией</h1>
+        <p>Мы заботимся о чистоте вашего дома!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Каталог продукции</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Каталог продукции</h2>
+
+            <div class="product">
+        <h3>Средство для мытья посуды "Clean Dish"</h3>
+        <p>Описание: Эффективное средство для удаления жира и пятен с посуды. Обладает приятным ароматом и не содержит вредных химических веществ.</p>
+        <p>Цена: 200 рублей за 1 литр.</p>
+        <p>Количество: Продается в бутылках по 1 литру.</p>
+        <p>Дополнительная информация: Подходит для мытья всех типов посуды, включая кастрюли и сковородки. Можно использовать в ручной и машинной мойке.</p>
+    </div>
+    
+    <div class="product">
+        <h3>Жидкое мыло "Soft Touch"</h3>
+        <p>Описание: Мягкое жидкое мыло с увлажняющими компонентами, которое бережно очищает кожу рук.</p>
+        <p>Цена: 150 рублей за 500 мл.</p>
+        <p>Количество: Продается во флаконах по 500 мл.</p>
+        <p>Дополнительная информация: Содержит натуральные экстракты для увлажнения кожи. Не содержит парабенов и искусственных красителей.</p>
+    </div>
+    
+    <div class="product">
+        <h3>Стиральный порошок "Clean Wash"</h3>
+        <p>Описание: Высокоэффективный стиральный порошок, который удаляет пятна и освежает ткани.</p>
+        <p>Цена: 300 рублей за 1 кг.</p>
+        <p>Количество: Продается в упаковках по 1 кг.</p>
+        <p>Дополнительная информация: Подходит для стирки белого и цветного белья. Содержит биоразлагаемые компоненты.</p>
+    </div>
+\end{lstlisting}
+\begin{lstlisting}[title=Продолжение листинга\;\ref{list:html}]
+        <h2>О нас</h2>
+        <p>Наша компания занимается оптовой торговлей бытовой химией уже более 10 лет. Мы предлагаем широкий ассортимент товаров для дома и быта. Наша продукция отличается высоким качеством и доступными ценами.</p>
+        
+        <h2>Контакты</h2>
+        <p>Адрес: <span>Москва, ул. Пушкина, д. 101</span><br>
+        Телефон: <span>+7 (999) 123-45-67</span><br>
+        E-mail: <span>info@example.com</span></p>
+    </main>
+    
+    <footer>
+        <p>© 2022 Оптовая торговля бытовой химией. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+\end{lstlisting}
+
+Также был создан примерный логотип (Рисунок\;\ref{fig:company_logo})
+компании для создания дополнительной нагрузки к серверу, которая
+потребуется в дальнейших расчетах.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\textwidth]{optohim}
+  \caption{Примерный логотип компании}
+  \label{fig:company_logo}
+\end{figure}
+
+\section{ОПРЕДЕЛЕНИЕ И РАСЧЕТ СЕРВИСНОЙ НАГРУЗКИ}
+В ходе данного пункта курсовой работы требуется произвести вычисления
+нагрузки сетевых сервисов на корпоративную сеть предприятия. Для этого
+будут выполнены вычисления для трех сервисов:
+\begin{itemize}
+\item веб-служба;
+\item файловый сервер;
+\item служба управления пользователями.
+\end{itemize}
+
+Остальные сервисы будут использоваться во время тестирования нагрузки
+данных служб, поэтому они в итоге будут учтены в расчете нагрузки.
+
+Для вычисления нагрузки файловой службы нужно учитывать специфику
+предприятия. Поскольку предприятие занимается оптовой продажей, то
+нагрузку будут составлять документы в формате\;.pdf.
+
+Для тестирования был воссоздан сеанс работы с файловой службы с
+использованием\;.pdf файла размером 1,3 МБ и выполнено скачивание и
+загрузка данного файла на файловый сервер. Для анализа данного сеанса
+был использовано программное обеспечение Wireshark
+(Рисунок\;\ref{fig:wireshark_nfs}). В ходе анализа было определено,
+что максимальный размер пакета составляет 65226 бит, количество
+пакетов составляет 1007, а время сеанса составило примерно 35 секунд.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{wireshark_nfs}
+  \caption{Анализ сеанса связи с файловым сервером}
+  \label{fig:wireshark_nfs}
+\end{figure}
+
+Для данного данных расчетов не будет использоваться средняя длина
+пакетов, так как основной объем пакетов идет с данными максимальной
+длины. В итоге объем одной транзакции равен
+(Формула\;\ref{eq:transaction_volume_nfs}).
+
+\begin{equation}\label{eq:transaction_volume_nfs}
+  V_\text{транзакции} = 65226 * 1007 = 65 682 582 \text{бит} \approx 63 \text{Мбит}.
+\end{equation}
+
+Далее потребуется определить медианное/пиковое количество
+запросов(транзакций) к файловой службе на основе особенностей
+предприятия. Количество обращений к файловому серверу происходят от
+следующих отделов и в следующем среднем количестве за один рабочий
+день (Таблица\;\ref{tab:packet_volume_nfs}).
+
+\begin{table}[H]
+  \caption{Планирование количества транзакций к файловой службе\label{tab:packet_volume_nfs}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    Отдел         & Количество АРМ & Количество обращений (транзакций) за рабочий день, шт & Всего пакетов за рабочий день, шт \\ \hline
+    Отдел ИТ      & 27             & 300                                                   & 302100                            \\ \hline
+    Бухгалтерия   & 11             & 700                                                   & 704900                            \\ \hline
+    Отдел кадров  & 11             & 670                                                   & 674690                            \\ \hline
+    Отдел закупок & 11             & 720                                                   & 725040                            \\ \hline
+    Отдел продаж  & 11             & 690                                                   & 694830                            \\ \hline
+    АХО           & 1              & 90                                                    & 90630                             \\ \hline
+    Дирекция      & 3              & 210                                                   & 211470                            \\ \hline
+    Охрана        & 1              & 20                                                    & 20140                             \\ \hline
+    Итого         &                & 3400                                                  & 3423800                           \\ \hline
+  \end{tabularx}
+\end{table}
+
+В итоге за 8-часовой рабочий день формируется примерно 3400 транзакций
+для файловой службы, что примерно равно 0,12 транзакций в секунду, что
+примерно равно 8 Мбит/с. Это значит что на коммутатор только от
+файловой службы будет поступать трафика как минимум на 8 Мбит/с или с
+учетом количества пакетов --- 119 пакетов в секунду.
+
+На основе полученных данных требуется с использованием теории очередей
+М/М/1\cite{query-theory} оценить минимально необходимую скорость
+канала передачи данных.  Вводятся следующие обозначения: $\lambda$ –
+скорость прибытия пакетов в секунду, $\mu$ – скорость обслуживания в
+пакетах в секунду, утилизация сетевого канала $\rho$,
+$V_\text{канала}$ – искомая минимальная скорость канала передачи
+данных между коммутатором L3 и сервером в бит/с, $N$ – средний
+максимальный объем пакета в битах.
+
+Расчеты искомой минимальной скорости канала передачи данных исходят из
+следующих двух формул: расчета коэффициента утилизации сетевого
+канала (Формула\;\ref{eq:utilization_koef}) и формулы для расчета
+скорости обслуживания (Формула\;\ref{eq:speed_service}). Причем
+оптимальное значение коэффициента утилизации канала передачи данных
+должно быть меньше $80\%$, так как иначе начнется отбрасывания
+пакетов, что не является предпочтительным сценарием.
+
+\begin{equation}\label{eq:utilization_koef}
+  \rho = \frac{\lambda}{\mu} \leq 80\% 
+\end{equation}
+\begin{equation}\label{eq:speed_service}
+  \mu = \frac{V_\text{канала}}{N}
+\end{equation}
+
+На основе Формул\;\ref{eq:utilization_koef},\;\ref{eq:speed_service}
+минимальная скорость канала передачи данных
+равна(Формула\;\ref{eq:link_speed}).
+
+\begin{equation}\label{eq:link_speed}
+  V_\text{канала} \geq \frac{\lambda  * N}{0,8} 
+\end{equation}
+
+В итоге получается, минимальная скорость канала передачи данных равна
+9 Мбит/с (Формула\;\ref{eq:link_speed_nfs}).
+
+\begin{equation}\label{eq:link_speed_nfs}
+  V_\text{канала} \geq \frac{119 * 65226}{0,8}
+\end{equation}
+
+При вычислении нагрузки веб-службы на сеть был организован сеанс
+работы с данной службой, то есть открытие веб-страницы из браузера на
+адрес web.ivanov.test:8385. После анализа полученных пакетов
+(Рисунок\;\ref{fig:wireshark_http}) было определено, что максимальный
+размер пакета составляет 1690 бит, количество пакетов за один сеанс
+связи составляет 259, время сеанса составило примерно 19 секунд.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{wireshark_http}
+  \caption{Анализ сеанса связи с веб-службой}
+  \label{fig:wireshark_http}
+\end{figure}
+
+Таким образом объем одной транзакции равен
+(Формула\;\ref{eq:transaction_volume_http}).
+
+\begin{equation}\label{eq:transaction_volume_http}
+  V_\text{транзакции} = 1690 * 259 = 437710 \text{бит} \approx 0,4 \text{Мбит}.
+\end{equation}
+
+Далее потребуется определить медианное/пиковое количество
+запросов(транзакций) к веб-службе на основе особенностей
+предприятия. Количество обращений к веб-серверу происходят от
+следующих отделов и в следующем среднем количестве за один рабочий
+день (Таблица\;\ref{tab:packet_volume_http}).
+
+\begin{table}[H]
+  \caption{Планирование количества транзакций к веб-службе\label{tab:packet_volume_http}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    Отдел         & Количество АРМ & Количество обращений (транзакций) за рабочий день, шт & Всего пакетов за рабочий день, шт \\ \hline
+    Отдел ИТ      & 27             & 3000                                                  & 777000                            \\ \hline
+    Бухгалтерия   & 11             & 200                                                   & 51800                             \\ \hline
+    Отдел кадров  & 11             & 600                                                   & 155400                            \\ \hline
+    Отдел закупок & 11             & 780                                                   & 202020                            \\ \hline
+    Отдел продаж  & 11             & 790                                                   & 204610                            \\ \hline
+    АХО           & 1              & 80                                                    & 20720                             \\ \hline
+    Дирекция      & 3              & 50                                                    & 12950                             \\ \hline
+    Охрана        & 1              & 30                                                    & 7770                              \\ \hline
+    Итого         &                & 5530                                                  & 1432270                           \\ \hline
+  \end{tabularx}
+\end{table}
+
+В итоге за 8-часовой рабочий день формируется примерно 5530 транзакций
+для файловой службы, что примерно равно 0,19 транзакций в секунду, что
+примерно равно 1,4 Мбит/с. Это значит что на коммутатор только от
+веб-службы будет поступать трафика как минимум на 1,4 Мбит/с или
+с учетом количества пакетов --- 50 пакетов в секунду.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{wireshark_http}
+  \caption{Анализ сеанса связи с веб-службой}
+  \label{fig:wireshark_http}
+\end{figure}
+
+На основе Формулы\;\ref{eq:link_speed} в итоге получается, минимальная
+скорость канала передачи данных равна 103 Кбит/с
+(Формула\;\ref{eq:link_speed_http}).
+
+\begin{equation}\label{eq:link_speed_http}
+  V_\text{канала} \geq \frac{50 * 1690}{0,8}
+\end{equation}
+
+Для расчета пропускной способности службы управления пользователями
+был организован сеанс связи, при котором было произведено логирование
+сетевого пользователя и создание билета Kerberos. В ходе анализа
+трафика (Рисунок\;\ref{fig:wireshark_ipa}) было определено, что
+максимальный объем пакета составляет 2462 бит, количество пакетов 199,
+время сеанса связи 72 секунды.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{wireshark_ipa}
+  \caption{Анализ сеанса связи со службой управления пользователями}
+  \label{fig:wireshark_ipa}
+\end{figure}
+
+Таким образом объем транзакции составляет
+(Формула\;\ref{eq:transaction_volume_ipa}).
+
+\begin{equation}\label{eq:transaction_volume_ipa}
+  V_\text{транзакции} = 2462 * 199 = 489938 \text{бит} \approx 0,5 \text{Мбит}.
+\end{equation}
+
+
+Далее потребуется определить медианное/пиковое количество
+запросов(транзакций) к службе управления пользователями на основе
+особенностей предприятия. Количество обращений к службе управления
+пользователями происходят от следующих отделов и в следующем среднем
+количестве за один рабочий день
+(Таблица\;\ref{tab:packet_volume_ipa}).
+
+\begin{table}[H]
+  \caption{Планирование количества транзакций к службе управления пользователями\label{tab:packet_volume_ipa}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    Отдел         & Количество АРМ & Количество обращений (транзакций) за рабочий день, шт & Всего пакетов за рабочий день, шт \\ \hline
+    Отдел ИТ      & 27             & 2700                                                  & 537300                            \\ \hline
+    Бухгалтерия   & 11             & 1100                                                  & 218900                            \\ \hline
+    Отдел кадров  & 11             & 2200                                                  & 437800                            \\ \hline
+    Отдел закупок & 11             & 3300                                                  & 656700                            \\ \hline
+    Отдел продаж  & 11             & 1100                                                  & 218900                            \\ \hline
+    АХО           & 1              & 200                                                   & 39800                             \\ \hline
+    Дирекция      & 3              & 1500                                                  & 298500                            \\
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption*{Продолжение таблицы\;\ref{tab:packet_volume_ipa}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|s|s|s|s|}
+    \hline
+    Охрана        & 1              & 200                                                   & 39800                             \\ \hline
+    Итого         &                & 12300                                                 & 2447700                           \\ \hline
+  \end{tabularx}
+\end{table}
+
+В итоге за 8-часовой рабочий день формируется примерно 12300
+транзакций для файловой службы, что примерно равно 0,43 транзакций в
+секунду, что примерно равно 0,215 Мбит/с. Это значит что на коммутатор
+только от службы управления пользователями будет поступать трафика как
+минимум на 0,215 Мбит/с или с учетом количества пакетов --- 85 пакетов в
+секунду.
+
+На основе Формулы\;\ref{eq:link_speed} в итоге получается, минимальная
+скорость канала передачи данных равна 255 Кбит/с
+(Формула\;\ref{eq:link_speed_ipa}).
+
+\begin{equation}\label{eq:link_speed_ipa}
+  V_\text{канала} \geq \frac{85 * 2462}{0,8}
+\end{equation}
+
+В итоге можно сделать вывод о том, что канала в 1 Гбит/с хватит для
+подддержания пропускной способности и работы сервисов, как было
+предположено при предварительном планировании прототипа.  Следует
+обратить внимание на то, что в данных расчетах не учитываются
+механизмы дифференцированных сервисов и принимается, что очередь одна
+и пакеты попадают в нее последовательно.
+
+\section{ИТОГОВОЕ ПЛАНИРОВАНИЕ}
+
+В ходе планирования, которое было выполнено ранее, можно сказать, что
+предварительный прототип сети полностью соотвествует требованиям сети
+и не требует никаких дополнительных изменений. Однако стоит отметить,
+что при использовании текущих линий на уровне ядра пропускной
+способности не хватит для соблюдения всех требований сети. При этом в
+рамках используемых устройств и слотов расширения нельзя полностью
+соблюсти требуемую пропускную способность сети. Для этого необходимо
+использовать линии с пропускной способностью 10 Gigabit Ethernet,
+которая имеет пропускную способность 10 Гбит/с.
+
+Суммарная стоимость и мощность промежуточных устройств, которые
+используются в прототипе сети указаны в
+Таблицах\;\ref{tab:hq_price_plan}~---~\ref{tab:warehouse_price_plan}.
+
+\begin{table}[H]
+  \caption{Планируемая стоимость и мощность промежуточных устройств для основного здания\label{tab:hq_price_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|>{\hsize=1.24\hsize}s|s|s|s|s|>{\hsize=.75\hsize}s|}
+    \hline
+    Название устройства      & Количество устройств, шт & Стоимость одного устройства, у.е. & Мощность одного устройства, Ватт & Суммарная стоимость, у.е. & Суммарная мощность, Ватт \\ \hline
+    Маршрутизатор 4331       & 2                        & 3150                              & 535                              & 6300                      & 1070 \\ \hline
+    Коммутатор L3 3650 24 PS & 4                        & 5100                              & 54                               & 20400                     & 216 \\ \hline
+    Коммутатор L2 2960       & 3                        & 1500                              & 40                               & 4500                      & 120 \\ \hline
+    \multicolumn{4}{|s|}{Итого:}  & 31200                    & 1406 \\ \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption{Планируемая стоимость и мощность промежуточных устройств для типового филиала\label{tab:filial_price_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|>{\hsize=1.24\hsize}s|s|s|s|s|>{\hsize=.75\hsize}s|}
+    \hline
+    Название устройства      & Количество устройств, шт & Стоимость одного устройства, у.е. & Мощность одного устройства, Ватт & Суммарная стоимость, у.е. & Суммарная мощность, Ватт \\ \hline
+    Маршрутизатор 4331       & 2                        & 3150                              & 535                              & 6300                      & 1070 \\ \hline
+    Коммутатор L3 3650 24 PS & 4                        & 5100                              & 54                               & 20400                     & 216 \\ \hline
+    Коммутатор L2 2960       & 1                        & 1500                              & 40                               & 1500                      & 40 \\ \hline
+    \multicolumn{4}{|s|}{Итого:}  & 28200                    & 1326 \\ \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \caption{Планируемая стоимость и мощность промежуточных устройств для основного здания\label{tab:warehouse_price_plan}}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{|>{\hsize=1.24\hsize}s|s|s|s|s|>{\hsize=.75\hsize}s|}
+    \hline
+    Название устройства     & Количество устройств, шт & Стоимость одного устройства, у.е. & Мощность одного устройства, Ватт & Суммарная стоимость, у.е. & Суммарная мощность, Ватт \\ \hline
+    Маршрутизатор 1841      & 1                        & 500                               & 35                               & 500                       & 35 \\ \hline
+    \multicolumn{4}{|s|}{Итого:} & 500                      & 35 \\ \hline
+  \end{tabularx}
+\end{table}
+
+С учетом количества площадок итоговая стоимость всех устройтсв будет равна 318700 у.е. 
+
+Результат моделирования сетевых служб представлен в
+Приложении\;\ref{apx:virtualbox}. Конфигурация сетевых устройств
+представлены в Приложении\;\ref{apx:conf}. Тестирование сети
+представлено в Приложении\;\ref{apx:test}.
+
+\clearpage
+\section*{ЗАКЛЮЧЕНИЕ}
+\addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
+
+В ходе данной курсовой работы была спроектирована внутренняя сеть
+предприятия, которая осущевствляет оптовую торговлю бытовой химией.
+
+Был проведен анализ исходных данных предприятия, в ходе которого были
+определены основные требования к пропускной способности сети.
+
+Было сформировано планирование сетей уровня 2 и 3 с последующим
+разделением физических сетей на виртуальные подсети, а также с
+последующей маршрутизацией сети.
+
+Был сформирован прототип сети с реализацией политик фильтрации трафика
+и обеспечения качества обслуживания. В рамках прототипа были внедрены
+службы динамического конфигурирования хостов и доменных имен.
+
+Также было проведено планирование развертывания служб управления
+временем, управления пользователями и веб-сервера с последующим
+расчетом сервисной нагрузки на сеть предприятия.
+
+Было проведено тестирование прототипа сети передачи данных, которое
+показало работоспособность данного проекта.
+
+Таким образом, в рамках данной курсовой работы получилось
+спроектировать достаточно надежную сеть, которая соблюдает требования,
+определнные исходными данными задачи. Такая сеть может быть развернута
+в рамках реального предприятия, однако потребует возможных доработок
+(например, реализации подключения к глобальной сети, которая не
+рассматривалась в рамках данной курсовой работы, а также использования
+более современных сетевых устройств, которые не были доступны в рамках
+используемого программного обеспечения).
+
+\begingroup \let\itshape\upshape \sloppy
+%\raggedright
+\printbibliography[title=СПИСОК ИСПОЛЬЗУЕМЫХ ИСТОЧНИКОВ]\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗУЕМЫХ ИСТОЧНИКОВ}
+\endgroup
+
+\clearpage
+\section*{ПРИЛОЖЕНИЯ}
+\addcontentsline{toc}{section}{ПРИЛОЖЕНИЯ}
+
+
+\begin{appendices}
+
+\titleformat{name=\section}[display]
+	{\newpage\normalfont\centering}
+        {\bfseries Приложение\ \thesection}{0em}{}{}
+\renewcommand{\thesection}{\Asbuk{section}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\begin{raggedright}
+Приложение\;\ref{apx:qos_acl}~---~Списки контроля доступа для обеспечения политик качества обслуживания\\
+Приложение\;\ref{apx:virtualbox}~---~Моделирование сетевых служб\\
+Приложение\;\ref{apx:conf}~---~Конфигурация сетевых устройств\\
+Приложение\;\ref{apx:test}~---~Тестирование работоспособности сети\\
+\end{raggedright}
+
+\section{Списки контроля доступа для обеспечения политик качества обслуживания}
+\label{apx:qos_acl}
+
+Списки контроля доступа распределы по типам сервисов, на которые будет применяться политики обеспечения качества обслуживания.
+
+Для файловой службы сервера необходима фильтрация портов TCP/UDP 2049 (Листинг\;\ref{list:qos_acl_nfs}).
+
+\begin{lstlisting}[caption=Список контроля доступа для файловой службы\label{list:qos_acl_nfs}]
+ip access-list extended NFS
+ permit tcp host 192.168.109.1 192.168.104.0 0.0.0.255 eq 2049
+ permit udp host 192.168.109.1 192.168.104.0 0.0.0.255 eq 2049
+\end{lstlisting}
+
+Для службы управления пользователями необходима фильтрация по портам TCP/UDP (Листинг\;\ref{list:qos_acl_ipa}), которые используются в рамках данной службы а именно:
+
+TCP порты:
+\begin{itemize}
+\item 80, 443: HTTP/HTTPS;
+\item 389, 636: LDAP/LDAPS;
+\item 88, 464: kerberos;
+\item 53: bind (служба доменных имен).
+\end{itemize}
+
+UDP порты:
+\begin{itemize}
+\item 88, 464: kerberos;
+\item 53: bind (служба доменных имен).
+\end{itemize}
+
+\begin{lstlisting}[caption=Список контроля доступа для службы управления пользователями\label{list:qos_acl_ipa}]
+ip access-list extended IPA
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 389
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 636
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq www
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 443
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 88
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 464
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq domain
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 88
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 464
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq domain
+\end{lstlisting}
+
+Для списков контроля доступа к веб-службе сервера используется фильтрация по TCP порту 8385, который был выделен как порт веб-страницы (Листинг\;\ref{list:qos_acl_web}).
+
+\begin{lstlisting}[caption=Список контроля доступа для веб-сервера\label{list:qos_acl_web}]
+ip access-list extended WEB
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 8385
+\end{lstlisting}
+
+Для служб динамического конфигурирования хостов и управления временем также идет фильтрация по стандартным для данных служб UDP портам (Листинги\;\ref{list:qos_acl_dhcp}-\ref{list:qos_acl_ntp}).
+
+\begin{lstlisting}[caption=Список контроля доступа для службы динамического конфигурирования хостов\label{list:qos_acl_dhcp}]
+ip access-list extended DHCP
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq bootpc
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Список контроля доступа для службы управления временем\label{list:qos_acl_ntp}]
+ip access-list extended NTP
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 123
+\end{lstlisting}
+
+Поскольку разграничение доступа происходит при помощи отдельных списков контроля доступа, которые установлены на логические интерфейсы VLAN на L3 коммутаторах, то для политик best-effort мы разрешаем все пакеты из любого источника (Листинг\;\ref{list:qos_acl_server}).
+
+\begin{lstlisting}[caption=Список контроля доступа для службы динамического конфигурирования хостов\label{list:qos_acl_server}]
+ip access-list extended SERVER
+ permit ip any any
+\end{lstlisting}
+
+\section{Моделирование сетевых служб}
+\label{apx:virtualbox}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_hosts}
+  \caption{Конфигурация доменов для сервера}
+  \label{fig:test_hosts}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_dns_config}
+  \caption{Конфигурация службы доменных имен}
+  \label{fig:test_dns_config}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_nslookup}
+  \caption{Тестирование с использованием nslookup}
+  \label{fig:test_nslookup}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_dhcp_server}
+  \caption{Конфигурация DHCP-сервера}
+  \label{fig:test_dhcp_server}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_dhcp_client}
+  \caption{Конфигурация DHCP-клиента}
+  \label{fig:test_dhcp_client}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_dhcp_get}
+  \caption{Результат получения DHCP-клиентом конфигураций}
+  \label{fig:test_dhcp_get}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_http_conf}
+  \caption{Конфигурация веб-сервера}
+  \label{fig:test_http_conf}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_http_client}
+  \caption{Веб-страница из веб-бразуера клиента}
+  \label{fig:test_http_client}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_ntp_service}
+  \caption{Статус службы управления временем на клиенте}
+  \label{fig:test_ntp_service}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_nfs_config}
+  \caption{Конфигурация файловой службы на сервере}
+  \label{fig:test_nfs_config}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_nfs_ls}
+  \caption{Содержимое сетевой директории на сервере}
+  \label{fig:test_ntp_timedatectl}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_freeipa_ipactl}
+  \caption{Статус службы управления пользователями на сервере}
+  \label{fig:test_freeipa_ipactl}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_freeipa_users}
+  \caption{Список пользователей}
+  \label{fig:test_ntp_timedatectl}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_freeipa_adduser}
+  \caption{Результат установки FreeIPA на клиентскую машину}
+  \label{fig:test_ntp_adduser}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test_freeipa_user}
+  \caption{Добавленный пользователь}
+  \label{fig:test_freeipa_user}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{test_freeipa_whoami}
+  \caption{Результат попытки входа в систему под добавленным пользователем}
+  \label{fig:test_freeipa_whoami}
+\end{figure}
+
+\section{Конфигурация сетевых устройств}
+\label{apx:conf}
+
+\begin{lstlisting}[caption=Конфигурация устройства R\_1\_IVANOV\label{list:conf_r1}]
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname R_1_IVANOV
+!
+!
+!
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name rtp.ivanov.test
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface GigabitEthernet0/0/0
+ ip address 192.168.116.1 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ ip address 192.168.112.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/2
+ ip address 192.168.113.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.112.0 0.0.0.3 area 0
+ network 192.168.113.0 0.0.0.3 area 0
+ network 192.168.116.0 0.0.0.3 area 0
+ default-information originate
+!
+router rip
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 Loopback0 
+!
+ip flow-export version 9
+!
+!
+!
+banner motd #
+Unauthorized access is prohibited!
+#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства R\_2\_IVANOV\label{list:conf_r2}]
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname R_2_IVANOV
+!
+!
+!
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name rtp.ivanov.test
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+!
+interface GigabitEthernet0/0/0
+ ip address 192.168.116.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ ip address 192.168.115.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/2
+ ip address 192.168.114.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.114.0 0.0.0.3 area 0
+ network 192.168.115.0 0.0.0.3 area 0
+ network 192.168.116.0 0.0.0.3 area 0
+ default-information originate
+!
+router rip
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 Loopback0 
+!
+ip flow-export version 9
+!
+!
+!
+banner motd #
+Unauthorized access is prohibited!
+#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_1\_L3\_IVANOV\label{list:conf_sw1_l3}]
+!
+version 16.3.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_1_L3_IVANOV
+!
+!
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+!
+spanning-tree mode pvst
+spanning-tree vlan 101-104,110-112,114 priority 24576
+spanning-tree vlan 105-109,113,115 priority 28672
+!
+class-map match-all EF
+ match access-group name NFS
+class-map match-all platinum
+ match ip dscp ef
+class-map match-all AF11
+ match access-group name IPA
+class-map match-all AF21
+ match access-group name WEB
+class-map match-all gold
+ match ip dscp af11
+ match ip dscp af21
+class-map match-all AF31
+ match access-group name DHCP
+class-map match-all silver
+ match ip dscp af31
+class-map match-all AF41
+ match access-group name NTP
+class-map match-all bronze
+ match ip dscp af31
+class-map match-all best-effort
+ match access-group name SERVER
+!
+policy-map SERVER
+ class platinum
+  priority 500
+ class gold
+  bandwidth percent 35
+ class silver
+  bandwidth percent 25
+ class bronze
+  bandwidth percent 15
+  shape average 320000
+ class best-effort
+!
+policy-map SETDSCP
+ class EF
+  set ip dscp ef
+ class AF11
+  set ip dscp af11
+ class AF21
+  set ip dscp af21
+ class AF31
+  set ip dscp af31
+ class AF41
+  set ip dscp af41
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/1
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode passive
+!
+interface GigabitEthernet1/0/4
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode passive
+!
+interface GigabitEthernet1/0/5
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode passive
+!
+interface GigabitEthernet1/0/6
+ switchport trunk allowed vlan 101-112
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/9
+ switchport access vlan 112
+ switchport mode access
+!
+interface GigabitEthernet1/0/10
+ switchport access vlan 114
+ switchport mode access
+!
+interface GigabitEthernet1/0/11
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan101
+ mac-address 0050.0f51.3701
+ ip address 192.168.101.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group IT in
+!
+interface Vlan102
+ mac-address 0050.0f51.3702
+ ip address 192.168.102.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group SELLS in
+!
+interface Vlan103
+ mac-address 0050.0f51.3703
+ ip address 192.168.103.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group STOCKS in
+!
+interface Vlan104
+ mac-address 0050.0f51.3704
+ ip address 192.168.104.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group BUKH in
+!
+interface Vlan105
+ mac-address 0050.0f51.3705
+ ip address 192.168.105.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group HR in
+!
+interface Vlan106
+ mac-address 0050.0f51.3706
+ ip address 192.168.106.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group HEADS in
+!
+interface Vlan107
+ mac-address 0050.0f51.3707
+ ip address 192.168.107.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group AHO in
+!
+interface Vlan108
+ mac-address 0050.0f51.3708
+ ip address 192.168.108.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group SEC in
+!
+interface Vlan109
+ mac-address 0050.0f51.3709
+ ip address 192.168.109.254 255.255.255.0
+!
+interface Vlan110
+ mac-address 0050.0f51.370a
+ ip address 192.168.110.254 255.255.255.0
+!
+interface Vlan111
+ mac-address 0050.0f51.370b
+ ip address 192.168.111.1 255.255.255.0
+!
+interface Vlan112
+ mac-address 0050.0f51.370c
+ ip address 192.168.112.1 255.255.255.252
+!
+interface Vlan114
+ mac-address 0050.0f51.370d
+ ip address 192.168.114.1 255.255.255.252
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.101.0 0.0.0.255 area 0
+ network 192.168.102.0 0.0.0.255 area 0
+ network 192.168.103.0 0.0.0.255 area 0
+ network 192.168.104.0 0.0.0.255 area 0
+ network 192.168.105.0 0.0.0.255 area 0
+ network 192.168.106.0 0.0.0.255 area 0
+ network 192.168.107.0 0.0.0.255 area 0
+ network 192.168.108.0 0.0.0.255 area 0
+ network 192.168.109.0 0.0.0.255 area 0
+ network 192.168.110.0 0.0.0.255 area 0
+ network 192.168.112.0 0.0.0.3 area 0
+ network 192.168.114.0 0.0.0.3 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+ip access-list extended SERVER
+ permit ip any any
+ip access-list extended NFS
+ permit tcp host 192.168.109.1 192.168.104.0 0.0.0.255 eq 2049
+ permit udp host 192.168.109.1 192.168.104.0 0.0.0.255 eq 2049
+ip access-list extended IPA
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 389
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 636
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq www
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 443
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 88
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 464
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq domain
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 88
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 464
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq domain
+ip access-list extended WEB
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 8385
+ip access-list extended DHCP
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq bootpc
+ permit udp any any eq bootps
+ip access-list extended NTP
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 123
+ip access-list extended SELLS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.102.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.102.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.102.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.102.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.102.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended STOCKS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.103.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.103.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.103.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.103.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.103.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended BUKH
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.104.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.104.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.104.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.104.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.104.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended HR
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.105.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.105.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.105.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.105.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.105.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended HEADS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.106.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.106.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.106.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.106.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.106.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended AHO
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.107.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.107.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.107.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.107.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.107.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended SEC
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.108.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.108.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.108.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.108.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.108.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended IT
+ permit udp any any eq bootps
+ permit udp host 192.168.101.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ospf any any
+!
+banner motd #
+Unauthorized access is prohibited
+#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_2\_L3\_IVANOV\label{list:conf_sw2_l3}]
+!
+version 16.3.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_2_L3_IVANOV
+!
+!
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+!
+spanning-tree mode pvst
+spanning-tree vlan 105-109,113,115 priority 24576
+spanning-tree vlan 101-104,110-112,114 priority 28672
+!
+class-map match-all EF
+ match access-group name NFS
+class-map match-all platinum
+ match ip dscp ef
+class-map match-all AF11
+ match access-group name IPA
+class-map match-all AF21
+ match access-group name WEB
+class-map match-all gold
+ match ip dscp af11
+ match ip dscp af21
+class-map match-all AF31
+ match access-group name DHCP
+class-map match-all silver
+ match ip dscp af31
+class-map match-all AF41
+ match access-group name NTP
+class-map match-all bronze
+ match ip dscp af31
+class-map match-all best-effort
+ match access-group name SERVER
+!
+policy-map SERVER
+ class platinum
+  priority 500
+ class gold
+  bandwidth percent 35
+ class silver
+  bandwidth percent 25
+ class bronze
+  bandwidth percent 15
+  shape average 320000
+ class best-effort
+  shape average 56000
+!
+policy-map SETDSCP
+ class EF
+  set ip dscp ef
+ class AF11
+  set ip dscp af11
+ class AF21
+  set ip dscp af21
+ class AF31
+  set ip dscp af31
+ class AF41
+  set ip dscp af41
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/1
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode passive
+!
+interface GigabitEthernet1/0/4
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode passive
+!
+interface GigabitEthernet1/0/5
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode passive
+!
+interface GigabitEthernet1/0/6
+ switchport trunk allowed vlan 101-113
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/9
+ switchport access vlan 115
+ switchport mode access
+!
+interface GigabitEthernet1/0/10
+ switchport access vlan 113
+ switchport mode access
+!
+interface GigabitEthernet1/0/11
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan101
+ mac-address 00e0.b0ce.6501
+ ip address 192.168.101.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group IT in
+!
+interface Vlan102
+ mac-address 00e0.b0ce.6502
+ ip address 192.168.102.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group SELLS in
+!
+interface Vlan103
+ mac-address 00e0.b0ce.6503
+ ip address 192.168.103.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group STOCKS in
+!
+interface Vlan104
+ mac-address 00e0.b0ce.6504
+ ip address 192.168.104.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group BUKH in
+!
+interface Vlan105
+ mac-address 00e0.b0ce.6505
+ ip address 192.168.105.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group HR in
+!
+interface Vlan106
+ mac-address 00e0.b0ce.6506
+ ip address 192.168.106.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group HEADS in
+!
+interface Vlan107
+ mac-address 00e0.b0ce.6507
+ ip address 192.168.107.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group AHO in
+!
+interface Vlan108
+ mac-address 00e0.b0ce.6508
+ ip address 192.168.108.254 255.255.255.0
+ ip helper-address 192.168.109.1
+ ip access-group SEC in
+!
+interface Vlan109
+ mac-address 00e0.b0ce.6509
+ ip address 192.168.109.254 255.255.255.0
+!
+interface Vlan110
+ mac-address 00e0.b0ce.650a
+ ip address 192.168.110.254 255.255.255.0
+!
+interface Vlan111
+ mac-address 00e0.b0ce.650b
+ ip address 192.168.111.2 255.255.255.0
+!
+interface Vlan113
+ mac-address 00e0.b0ce.650c
+ ip address 192.168.113.1 255.255.255.252
+!
+interface Vlan115
+ mac-address 00e0.b0ce.650d
+ ip address 192.168.115.1 255.255.255.252
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.101.0 0.0.0.255 area 0
+ network 192.168.102.0 0.0.0.255 area 0
+ network 192.168.103.0 0.0.0.255 area 0
+ network 192.168.104.0 0.0.0.255 area 0
+ network 192.168.105.0 0.0.0.255 area 0
+ network 192.168.106.0 0.0.0.255 area 0
+ network 192.168.107.0 0.0.0.255 area 0
+ network 192.168.108.0 0.0.0.255 area 0
+ network 192.168.109.0 0.0.0.255 area 0
+ network 192.168.110.0 0.0.0.255 area 0
+ network 192.168.113.0 0.0.0.3 area 0
+ network 192.168.115.0 0.0.0.3 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+ip access-list extended SERVER
+ permit ip any any
+ip access-list extended NFS
+ permit tcp host 192.168.109.1 192.168.104.0 0.0.0.255 eq 2049
+ permit udp host 192.168.109.1 192.168.104.0 0.0.0.255 eq 2049
+ip access-list extended IPA
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 389
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 636
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq www
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 443
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 88
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 464
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq domain
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 88
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 464
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq domain
+ip access-list extended WEB
+ permit tcp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 8385
+ip access-list extended DHCP
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq bootpc
+ permit udp any any eq bootps
+ip access-list extended NTP
+ permit udp host 192.168.109.1 192.168.96.0 0.0.15.255 eq 123
+ip access-list extended SELLS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.102.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.102.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.102.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.102.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.102.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.102.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.102.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended STOCKS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.103.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.103.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.103.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.103.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.103.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.103.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.103.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended BUKH
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.104.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.104.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.104.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.104.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.104.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.104.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.104.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended HR
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.105.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.105.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.105.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.105.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.105.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.105.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.105.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended HEADS
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.106.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.106.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.106.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.106.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.106.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.106.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.106.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended AHO
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.107.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.107.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.107.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.107.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.107.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.107.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.107.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended SEC
+ permit ospf any any
+ permit udp any any eq bootps
+ permit udp host 192.168.108.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.112.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.113.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.114.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.115.2
+ permit ip 192.168.108.0 0.0.0.255 host 192.168.116.2
+ permit ip 192.168.108.0 0.0.0.255 host 1.1.1.1
+ permit ip 192.168.108.0 0.0.0.255 host 2.2.2.2
+ permit icmp 192.168.108.0 0.0.0.255 host 192.168.109.1 echo
+ permit icmp 192.168.108.0 0.0.0.255 host 192.168.109.1 echo-reply
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq www
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq domain
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 389
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 636
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 2049
+ permit tcp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 8385
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 123
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 88
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 464
+ permit udp 192.168.108.0 0.0.0.255 host 192.168.109.1 eq 2049
+ip access-list extended IT
+ permit udp any any eq bootps
+ permit udp host 192.168.101.255 host 192.168.109.1 eq bootpc
+ permit ip 192.168.101.0 0.0.0.255 any
+ permit ospf any any
+!
+banner motd #
+Unauthorized access is prohibited
+#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_1\_L2\_IVANOV\label{list:conf_sw1_l2}]
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_1_L2_IVANOV
+!
+enable password 7 0822455D0A16
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 101
+ switchport mode access
+!
+interface FastEthernet0/24
+ switchport access vlan 101
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport trunk allowed vlan 101-115
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan110
+ ip address 192.168.110.1 255.255.255.0
+!
+ip default-gateway 192.168.110.254
+!
+banner motd #
+Unauthorized access is prohibited!
+#
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_2\_L2\_IVANOV\label{list:conf_sw2_l2}]
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_2_L2_IVANOV
+!
+enable password 7 0822455D0A16
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 107
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 108
+ switchport mode access
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan110
+ ip address 192.168.110.2 255.255.255.0
+!
+ip default-gateway 192.168.110.254
+!
+banner motd #
+Unauthorized access is prohibited
+#
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_3\_L2\_IVANOV\label{list:conf_sw3_l2}]
+!
+version 16.3.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_3_L2_IVANOV
+!
+!
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface Port-channel2
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/1
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/2
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/3
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/4
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/5
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/6
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/7
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/8
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/9
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/10
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/11
+ switchport access vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/12
+ switchport access vlan 101
+ switchport mode access
+!
+interface GigabitEthernet1/0/13
+ switchport access vlan 101
+ switchport mode access
+!
+interface GigabitEthernet1/0/14
+ switchport access vlan 101
+ switchport mode access
+!
+interface GigabitEthernet1/0/15
+ switchport access vlan 106
+ switchport mode access
+!
+interface GigabitEthernet1/0/16
+ switchport access vlan 106
+ switchport mode access
+!
+interface GigabitEthernet1/0/17
+ switchport access vlan 106
+ switchport mode access
+!
+interface GigabitEthernet1/0/18
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/19
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/20
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/21
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 2 mode active
+!
+interface GigabitEthernet1/0/22
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 2 mode active
+!
+interface GigabitEthernet1/0/23
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 2 mode active
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan110
+ mac-address 0060.70da.de01
+ ip address 192.168.110.3 255.255.255.0
+!
+ip default-gateway 192.168.110.254
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd #
+Unauthorized access is prohibited
+#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_4\_L2\_IVANOV\label{list:conf_sw4_l2}]
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_4_L2_IVANOV
+!
+enable password 7 0822455D0A16
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 103
+ switchport mode access
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan110
+ ip address 192.168.110.4 255.255.255.0
+!
+ip default-gateway 192.168.110.254
+!
+banner motd #
+Unauthorized access is prohibited
+#
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Конфигурация устройства SW\_5\_L2\_IVANOV\label{list:conf_sw5_l2}]
+!
+version 16.3.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW_5_L2_IVANOV
+!
+!
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+username SSHAdmin privilege 15 password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name sw.ivanov.test
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ switchport access vlan 109
+ switchport trunk allowed vlan 105
+ switchport mode access
+!
+interface GigabitEthernet1/0/2
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport trunk allowed vlan 101-111
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan110
+ mac-address 0001.63d8.b301
+ ip address 192.168.110.5 255.255.255.0
+!
+ip default-gateway 192.168.110.254
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd #
+Unauthorized access is prohibited
+#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 14
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{config_dhcp}
+  \caption{Конфигурация DHCP-сервера в Cisco Packet Tracer}
+  \label{fig:config_dhcp}
+\end{figure}
+
+\section{Тестирование работоспособности сети}
+\label{apx:test}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cisco_topology}
+  \caption{Смоделированная топология в Cisco Packet Tracer}
+  \label{fig:cisco_topology}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cisco_test_ping}
+  \caption{Проверка соединения между различными устройствами}
+  \label{fig:cisco_test_ping}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cisco_test_web}
+  \caption{Проверка работоспособности веб-службы и службы доменных имен}
+  \label{fig:cisco_test_web}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cisco_test_dhcp}
+  \caption{Проверка работоспособности службы динамического конфигурирования хостов}
+  \label{fig:cisco_test_dhcp}
+\end{figure}
+
+\end{appendices}
+
+\end{document}

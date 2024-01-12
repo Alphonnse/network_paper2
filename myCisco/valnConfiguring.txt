@@ -1,0 +1,255 @@
+interface range gigabitEthernet 0/1-2
+switchport mode trunk 
+switchport trunk allowed vlan 2-5,101-109,111
+exit
+exit
+
+
+vlan 2
+name management
+exit
+vlan 3
+name interconnected1
+exit
+vlan 4
+name interconnected2
+exit
+vlan 5
+name interconnected3
+exit
+vlan 101
+name admin
+exit
+vlan 102
+name accaunting
+exit
+vlan 103
+name hr
+exit
+vlan 104
+name purchasing
+exit
+vlan 105
+name sales
+exit
+vlan 106
+name analytics
+exit
+vlan 107
+name it
+exit
+vlan 108
+name security
+exit
+vlan 109
+name service
+exit
+vlan 111
+name server
+exit
+
+
+int vlan 2
+name management
+exit
+int vlan 3
+name interconnected1
+exit
+int vlan 4
+name interconnected2
+exit
+int vlan 5
+name interconnected3
+exit
+int vlan 101
+ip address 192.168.101.251 255.255.255.0
+exit
+int vlan 102
+ip address 192.168.102.251 255.255.255.0
+exit
+int vlan 103
+ip address 192.168.103.251 255.255.255.0
+exit
+int vlan 104
+ip address 192.168.104.251 255.255.255.0
+exit
+int vlan 105
+ip address 192.168.105.251 255.255.255.0
+exit
+int vlan 106
+ip address 192.168.106.251 255.255.255.0
+exit
+int vlan 107
+ip address 192.168.107.251 255.255.255.0
+exit
+int vlan 108
+ip address 192.168.108.251 255.255.255.0
+exit
+int vlan 109
+ip address 192.168.109.251 255.255.255.0
+exit
+int vlan 111
+ip address 192.168.111.254
+exit
+
+int vlan 101
+standby 101 ip 192.168.101.254
+standby 101 priority 105
+exit
+int vlan 102
+standby 102 ip 192.168.102.254
+standby 102 priority 105
+exit
+int vlan 103
+standby 103 ip 192.168.103.254
+standby 103 priority 105
+exit
+int vlan 104
+standby 104 ip 192.168.104.254
+standby 104 priority 105
+exit
+int vlan 105
+standby 105 ip 192.168.105.254
+standby 105 priority 105
+exit
+int vlan 106
+standby 106 ip 192.168.106.254
+standby 106 priority 105
+exit
+int vlan 107
+standby 107 ip 192.168.107.254
+standby 107 priority 105
+exit
+int vlan 108
+standby 108 ip 192.168.108.254
+standby 108 priority 105
+exit
+int vlan 109
+standby 109 ip 192.168.109.254
+standby 109 priority 105
+exit
+
+
+int vlan 101
+standby 101 ip 192.168.101.254
+exit
+int vlan 102
+standby 102 ip 192.168.102.254
+exit
+int vlan 103
+standby 103 ip 192.168.103.254
+exit
+int vlan 104
+standby 104 ip 192.168.104.254
+exit
+int vlan 105
+standby 105 ip 192.168.105.254
+exit
+int vlan 106
+standby 106 ip 192.168.106.254
+exit
+int vlan 107
+standby 107 ip 192.168.107.254
+exit
+int vlan 108
+standby 108 ip 192.168.108.254
+exit
+int vlan 109
+standby 109 ip 192.168.109.254
+exit
+
+
+int vlan 102
+standby 102 preempt
+exit
+int vlan 103
+standby 103 preempt
+exit
+int vlan 104
+standby 104 preempt
+exit
+int vlan 105
+standby 105 preempt
+exit
+int vlan 106
+standby 106 preempt
+exit
+int vlan 107
+standby 107 preempt
+exit
+int vlan 108
+standby 108 preempt
+exit
+int vlan 109
+standby 109 preempt
+exit
+
+
+
+
+
+
+ip route 192.168.102.0 255.255.255.0 192.168.3.2
+ip route 192.168.102.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.103.0 255.255.255.0 192.168.3.2
+ip route 192.168.103.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.104.0 255.255.255.0 192.168.3.2
+ip route 192.168.104.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.105.0 255.255.255.0 192.168.3.2
+ip route 192.168.105.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.106.0 255.255.255.0 192.168.3.2
+ip route 192.168.106.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.107.0 255.255.255.0 192.168.3.2
+ip route 192.168.107.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.108.0 255.255.255.0 192.168.3.2
+ip route 192.168.108.0 255.255.255.0 192.168.5.2 200
+ip route 192.168.109.0 255.255.255.0 192.168.3.2
+ip route 192.168.109.0 255.255.255.0 192.168.5.2 200
+
+ip route 192.168.111.0 255.255.255.0 192.168.4.2
+
+
+
+ip access-list standard 1
+permit 192.168.111.0 0.0.0.255
+deny 192.168.101.0 0.0.0.255
+deny 192.168.102.0 0.0.0.255
+deny 192.168.103.0 0.0.0.255
+deny 192.168.104.0 0.0.0.255
+deny 192.168.105.0 0.0.0.255
+deny 192.168.106.0 0.0.0.255
+deny 192.168.107.0 0.0.0.255
+deny 192.168.108.0 0.0.0.255
+deny 192.168.109.0 0.0.0.255
+permit any
+
+
+
+
+int vlan 101
+ip access-group 1 out
+exit
+int vlan 102
+ip access-group 1 out
+exit
+int vlan 103
+ip access-group 1 out
+exit
+int vlan 104
+ip access-group 1 out
+exit
+int vlan 105
+ip access-group 1 out
+exit
+int vlan 106
+ip access-group 1 out
+exit
+int vlan 107
+ip access-group 1 out
+exit
+int vlan 108
+ip access-group 1 out
+exit
+int vlan 109
+ip access-group 1 out
+exit

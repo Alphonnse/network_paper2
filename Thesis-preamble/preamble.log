@@ -1,0 +1,5021 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.12.13)  12 JAN 2024 18:20
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**preamble.tex
+(./preamble.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen140
+)
+\c@part=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
+\c@figure=\count187
+\c@table=\count188
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen141
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2023/02/13 3.86 The Babel package
+\babel@savecnt=\count189
+\U@D=\dimen142
+\l@unhyphenated=\language3
+
+(/usr/share/texmf-dist/tex/generic/babel/xebabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count190
+
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+)
+
+! Package babel Error: Unknown option 'russian'. Either you misspelled it
+(babel)                or the language definition file russian.ldf was not foun
+d.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4373 \ProcessOptions*
+                       
+? 
+) (/usr/share/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(/usr/share/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count191
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count192
+\g__pdf_backend_annotation_int=\count193
+\g__pdf_backend_link_int=\count194
+))
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+
+(/usr/share/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
+TeX
+
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count195
+\l__fontspec_language_int=\count196
+\l__fontspec_strnum_int=\count197
+\l__fontspec_tmp_int=\count198
+\l__fontspec_tmpa_int=\count199
+\l__fontspec_tmpb_int=\count266
+\l__fontspec_tmpc_int=\count267
+\l__fontspec_em_int=\count268
+\l__fontspec_emdef_int=\count269
+\l__fontspec_strong_int=\count270
+\l__fontspec_strongdef_int=\count271
+\l__fontspec_tmpa_dim=\dimen143
+\l__fontspec_tmpb_dim=\dimen144
+\l__fontspec_tmpc_dim=\dimen145
+
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen146
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count272
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count273
+\leftroot@=\count274
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count275
+\DOTSCASE@=\count276
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count277
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count278
+\dotsspace@=\muskip16
+\c@parentequation=\count279
+\dspbrk@lvl=\count280
+\tag@help=\toks17
+\row@=\count281
+\column@=\count282
+\maxfields@=\count283
+\andhelp@=\toks18
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+\g__um_fam_int=\count284
+\g__um_fonts_used_int=\count285
+\l__um_primecount_int=\count286
+\g__um_primekern_muskip=\muskip17
+
+(/usr/share/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+(/usr/share/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,Ligatures=TeX,Ligatures=
+{TeX}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: Font family 'TimesNewRoman(1)' created for font 'Times
+(fontspec)             New Roman' with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,Ligatures={TeX}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 2
+12.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line
+ 212.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 
+212.
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: Could not resolve font "Courier New/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'CourierNew(0)' created for font 'Courier
+(fontspec)             New' with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,WordSpace={1,0,0},Hyphen
+Char=None,PunctuationSpace=WordSpace].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Courier
+(fontspec)             New/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Courier
+(fontspec)             New/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Courier
+(fontspec)             New/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: Could not resolve font "Courier New/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'CourierNew(1)' created for font 'Courier
+(fontspec)             New' with options [Ligatures={TeX},Renderer=Basic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Courier
+(fontspec)             New/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Courier
+(fontspec)             New/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Courier
+(fontspec)             New/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/m/n on input line 213
+.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/b/n on input line 213
+.
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: Font family 'XITSMath(0)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,BoldItalicFont={},Italic
+Font={},SmallCapsFont={},Script=Math].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"XITS
+(fontspec)             Math/OT:script=math;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: Font family 'XITSMath(1)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,BoldItalicFont={},Italic
+Font={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=12.6-},{Size=9.72-12.6
+,Font=XITS
+(fontspec)             Math,Style=MathScript},{Size=-9.72,Font=XITS
+(fontspec)             Math,Style=MathScriptScript}}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <12.6->"XITS
+(fontspec)             Math/OT:script=math;language=dflt;mapping=tex-text;"<9.7
+2-12.6>"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;mapping=tex-te
+xt;"<-9.72>"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=1;mapping=tex-te
+xt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 214.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/XITSMath(1)/m/n on input line 214.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 214.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/XITSMath(1)/b/n on input line 214.
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: XITS Math scale = 1.0001.
+
+
+Package fontspec Info: XITS Math scale = 1.0001.
+
+
+Package fontspec Info: XITS Math scale = 1.0001.
+
+
+Package fontspec Info: XITS Math scale = 1.0001.
+
+
+Package fontspec Info: XITS Math/B scale = 1.0001.
+
+
+Package fontspec Info: Font family 'XITSMath(2)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,BoldItalicFont={},Italic
+Font={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=12.6-},{Size=9.72-12.6
+,Font=XITS
+(fontspec)             Math,Style=MathScript},{Size=-9.72,Font=XITS
+(fontspec)             Math,Style=MathScriptScript}},ScaleAgain=1.0001,FontAdju
+stment={\fontdimen
+(fontspec)             8\font =8.35199pt\relax \fontdimen 9\font
+(fontspec)             =6.912pt\relax \fontdimen 10\font =6.912pt\relax
+(fontspec)             \fontdimen 11\font =10.08pt\relax \fontdimen 12\font
+(fontspec)             =6.912pt\relax \fontdimen 13\font =5.76pt\relax
+(fontspec)             \fontdimen 14\font =5.76pt\relax \fontdimen 15\font
+(fontspec)             =3.95999pt\relax \fontdimen 16\font =3.6pt\relax
+(fontspec)             \fontdimen 17\font =3.6pt\relax \fontdimen 18\font
+(fontspec)             =5.4pt\relax \fontdimen 19\font =0.72pt\relax
+(fontspec)             \fontdimen 22\font =3.6pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <12.6->s*[1.0001]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;mapping=tex-text;"<9.7
+2-12.6>s*[1.0001]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;mapping=tex-te
+xt;"<-9.72>s*[1.0001]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=1;mapping=tex-te
+xt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =8.35199pt\relax \fontdimen 9\font
+(fontspec)             =6.912pt\relax \fontdimen 10\font =6.912pt\relax
+(fontspec)             \fontdimen 11\font =10.08pt\relax \fontdimen 12\font
+(fontspec)             =6.912pt\relax \fontdimen 13\font =5.76pt\relax
+(fontspec)             \fontdimen 14\font =5.76pt\relax \fontdimen 15\font
+(fontspec)             =3.95999pt\relax \fontdimen 16\font =3.6pt\relax
+(fontspec)             \fontdimen 17\font =3.6pt\relax \fontdimen 18\font
+(fontspec)             =5.4pt\relax \fontdimen 19\font =0.72pt\relax
+(fontspec)             \fontdimen 22\font =3.6pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.0001]"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =8.35199pt\relax \fontdimen 9\font
+(fontspec)             =6.912pt\relax \fontdimen 10\font =6.912pt\relax
+(fontspec)             \fontdimen 11\font =10.08pt\relax \fontdimen 12\font
+(fontspec)             =6.912pt\relax \fontdimen 13\font =5.76pt\relax
+(fontspec)             \fontdimen 14\font =5.76pt\relax \fontdimen 15\font
+(fontspec)             =3.95999pt\relax \fontdimen 16\font =3.6pt\relax
+(fontspec)             \fontdimen 17\font =3.6pt\relax \fontdimen 18\font
+(fontspec)             =5.4pt\relax \fontdimen 19\font =0.72pt\relax
+(fontspec)             \fontdimen 22\font =3.6pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 214.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/XITSMath(2)/m/n on input line 214.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 214.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/XITSMath(2)/b/n on input line 214.
+
+Package fontspec Warning: Ignored LuaTeX-only feature:
+(fontspec)                'Renderer=Full/Basic/Node/Base/HarfBuzz'.
+
+
+Package fontspec Info: XITS Math scale = 0.9999.
+
+
+Package fontspec Info: XITS Math scale = 0.9999.
+
+
+Package fontspec Info: XITS Math scale = 0.9999.
+
+
+Package fontspec Info: XITS Math scale = 0.9999.
+
+
+Package fontspec Info: XITS Math/B scale = 0.9999.
+
+
+Package fontspec Info: Font family 'XITSMath(3)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [Ligatures={TeX},Renderer=Basic,BoldItalicFont={},Italic
+Font={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=12.6-},{Size=9.72-12.6
+,Font=XITS
+(fontspec)             Math,Style=MathScript},{Size=-9.72,Font=XITS
+(fontspec)             Math,Style=MathScriptScript}},ScaleAgain=0.9999,FontAdju
+stment={\fontdimen
+(fontspec)             8\font =0.9504pt\relax \fontdimen 9\font =2.16pt\relax
+(fontspec)             \fontdimen 10\font =2.16pt\relax \fontdimen 11\font
+(fontspec)             =4.31999pt\relax \fontdimen 12\font =8.64pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <12.6->s*[0.9999]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;mapping=tex-text;"<9.7
+2-12.6>s*[0.9999]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;mapping=tex-te
+xt;"<-9.72>s*[0.9999]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=1;mapping=tex-te
+xt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.9504pt\relax \fontdimen 9\font
+(fontspec)             =2.16pt\relax \fontdimen 10\font =2.16pt\relax
+(fontspec)             \fontdimen 11\font =4.31999pt\relax \fontdimen 12\font
+(fontspec)             =8.64pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[0.9999]"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.9504pt\relax \fontdimen 9\font
+(fontspec)             =2.16pt\relax \fontdimen 10\font =2.16pt\relax
+(fontspec)             \fontdimen 11\font =4.31999pt\relax \fontdimen 12\font
+(fontspec)             =8.64pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 2
+14.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/XITSMath(3)/m/n on input line 214.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 214
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/XITSMath(3)/b/n on input line 214.
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+))
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
+\c@section@level=\count287
+)
+(/usr/share/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen155
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count290
+
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 3164.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count291
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen156
+
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count292
+\Field@Width=\dimen157
+\Fld@charsize=\dimen158
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
+
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box54
+\c@Hy@AnnotLevel=\count296
+\HyField@AnnotCount=\count297
+\Fld@listcount=\count298
+\c@bookmark@seq@number=\count299
+
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip53
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 228.
+Package hyperref Info: Option `breaklinks' set `true' on input line 228.
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen161
+\ar@mcellbox=\box55
+\extrarowheight=\dimen162
+\NC@list=\toks22
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box56
+)
+\TX@col@width=\dimen163
+\TX@old@table=\dimen164
+\TX@old@col=\dimen165
+\TX@target=\dimen166
+\TX@delta=\dimen167
+\TX@cols=\count300
+\TX@ftn=\toks23
+)
+(/usr/share/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+\TY@count=\count301
+\TY@linewidth=\dimen168
+\tymin=\dimen169
+\tymax=\dimen170
+\TY@tablewidth=\dimen171
+)
+(/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip56
+\multirow@cntb=\count302
+\multirow@dima=\skip57
+\bigstrutjot=\dimen172
+)
+(/usr/share/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count303
+\lst@gtempboxa=\box57
+\lst@token=\toks24
+\lst@length=\count304
+\lst@currlwidth=\dimen173
+\lst@column=\count305
+\lst@pos=\count306
+\lst@lostspace=\dimen174
+\lst@width=\dimen175
+\lst@newlines=\count307
+\lst@lineno=\count308
+\lst@maxwidth=\dimen176
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count309
+\lst@skipnumbers=\count310
+\lst@framebox=\box58
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count311
+\Gm@cntv=\count312
+\c@Gm@tempcnt=\count313
+\Gm@bindingoffset=\dimen177
+\Gm@wd@mp=\dimen178
+\Gm@odd@mp=\dimen179
+\Gm@even@mp=\dimen180
+\Gm@layoutwidth=\dimen181
+\Gm@layoutheight=\dimen182
+\Gm@layouthoffset=\dimen183
+\Gm@layoutvoffset=\dimen184
+\Gm@dimlist=\toks25
+)
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip58
+\enit@outerparindent=\dimen185
+\enit@toks=\toks26
+\enit@inbox=\box59
+\enit@count@id=\count314
+\enitdp@description=\count315
+)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count316
+\calc@Bcount=\count317
+\calc@Adimen=\dimen186
+\calc@Bdimen=\dimen187
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count318
+\calc@Cskip=\skip61
+)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen188
+\ESO@tempdimb=\dimen189
+
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+))
+\AM@pagewidth=\dimen190
+\AM@pageheight=\dimen191
+\AM@fboxrule=\dimen192
+
+(/usr/share/texmf-dist/tex/latex/pdfpages/ppxetex.def
+File: ppxetex.def 2022/12/19 v0.5x Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count319
+\AM@pagebox=\box60
+\AM@global@opts=\toks27
+\AM@pagecnt=\count320
+\AM@toc@title=\toks28
+\AM@lof@heading=\toks29
+\c@AM@survey=\count321
+\AM@templatesizebox=\box61
+)
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+))
+(/usr/share/texmf-dist/tex/latex/everypage/everypage.sty
+Package: everypage 2020/10/17 R2.0b Hooks to run on every page
+
+
+Package everypage Warning: Functionality similar to this package has recently
+(everypage)                been implemented in LaTeX. This package is now in
+(everypage)                legacy status.
+(everypage)                Please, don't use it in new documents and packages.
+
+
+Package everypage Warning: You appear to be running a version of LaTeX
+(everypage)                providing the new functionality.
+(everypage)                Doing the best to deliver the original `everypage`
+(everypage)                interface on top of it. Strict equivalence is
+(everypage)                not possible, breakage may occur.
+(everypage)                If truly needed, Use `everypage-1x` to force the
+(everypage)                loading of an older code base.
+
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count322
+\float@exts=\toks30
+\float@box=\box62
+\@float@everytoks=\toks31
+\@floatcapt=\box63
+)
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen193
+\captionmargin=\dimen194
+\caption@leftmargin=\dimen195
+\caption@rightmargin=\dimen196
+\caption@width=\dimen197
+\caption@indent=\dimen198
+\caption@parindent=\dimen199
+\caption@hangindent=\dimen256
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count323
+\c@continuedfloat=\count324
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
+Package newfloat Info: Unsupported document class, or \@chapter 
+(newfloat)             was already redefined by another package.
+Package newfloat Info: \@chapter = macro:->\def \Hy@next {\Hy@MakeCurrentHrefAu
+to {\Hy@chapapp *}\Hy@raisedlink {\hyper@anchorstart {\@currentHref }\hyper@anc
+horend }}\ifnum \c@secnumdepth >\m@ne \ltx@IfUndefined {if@mainmatter}\iftrue {
+\csname if@mainmatter\endcsname }\let \Hy@next \relax \fi \fi \Hy@next \Hy@org@
+chapter .
+Package newfloat Info: \Hy@org@chapter = macro:[#1]#2->\NR@gettitle {#1}\NR@cha
+pter [{#1}]{#2}.
+)
+(/usr/share/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/02/25 v3.4 ragged2e Package
+\CenteringLeftskip=\skip62
+\RaggedLeftLeftskip=\skip63
+\RaggedRightLeftskip=\skip64
+\CenteringRightskip=\skip65
+\RaggedLeftRightskip=\skip66
+\RaggedRightRightskip=\skip67
+\CenteringParfillskip=\skip68
+\RaggedLeftParfillskip=\skip69
+\RaggedRightParfillskip=\skip70
+\JustifyingParfillskip=\skip71
+\CenteringParindent=\skip72
+\RaggedLeftParindent=\skip73
+\RaggedRightParindent=\skip74
+\JustifyingParindent=\skip75
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box64
+\beforetitleunit=\skip76
+\aftertitleunit=\skip77
+\ttl@plus=\dimen257
+\ttl@minus=\dimen258
+\ttl@toksa=\toks32
+\titlewidth=\dimen259
+\titlewidthlast=\dimen260
+\titlewidthfirst=\dimen261
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2021/07/05 v2.14 TOC entries
+\ttl@leftsep=\dimen262
+)
+(/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count325
+\c@@ppsavesec=\count326
+\c@@ppsaveapp=\count327
+)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count328
+)
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count329
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count330
+\c@listtotal=\count331
+\c@listcount=\count332
+\c@liststart=\count333
+\c@liststop=\count334
+\c@citecount=\count335
+\c@citetotal=\count336
+\c@multicitecount=\count337
+\c@multicitetotal=\count338
+\c@instcount=\count339
+\c@maxnames=\count340
+\c@minnames=\count341
+\c@maxitems=\count342
+\c@minitems=\count343
+\c@citecounter=\count344
+\c@maxcitecounter=\count345
+\c@savedcitecounter=\count346
+\c@uniquelist=\count347
+\c@uniquename=\count348
+\c@refsection=\count349
+\c@refsegment=\count350
+\c@maxextratitle=\count351
+\c@maxextratitleyear=\count352
+\c@maxextraname=\count353
+\c@maxextradate=\count354
+\c@maxextraalpha=\count355
+\c@abbrvpenalty=\count356
+\c@highnamepenalty=\count357
+\c@lownamepenalty=\count358
+\c@maxparens=\count359
+\c@parenlevel=\count360
+\blx@tempcnta=\count361
+\blx@tempcntb=\count362
+\blx@tempcntc=\count363
+\c@blx@maxsection=\count364
+\blx@maxsegment@0=\count365
+\blx@notetype=\count366
+\blx@parenlevel@text=\count367
+\blx@parenlevel@foot=\count368
+\blx@sectionciteorder@0=\count369
+\blx@sectionciteorderinternal@0=\count370
+\blx@entrysetcounter=\count371
+\blx@biblioinstance=\count372
+\labelnumberwidth=\skip78
+\labelalphawidth=\skip79
+\biblabelsep=\skip80
+\bibitemsep=\skip81
+\bibnamesep=\skip82
+\bibinitsep=\skip83
+\bibparsep=\skip84
+\bibhang=\skip85
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language4
+\c@mincomprange=\count373
+\c@maxcomprange=\count374
+\c@mincompwidth=\count375
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'gost-numeric.dbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/gost-numeric.dbx
+File: gost-numeric.dbx 2021/05/08 v1.22 biblatex-gost data model
+Package biblatex Info: Trying to load biblatex-gost data model...
+Package biblatex Info: ... file 'biblatex-gost.dbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/biblatex-gost.dbx
+File: biblatex-gost.dbx 2021/05/08 v1.22 biblatex-gost data model
+))
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count376
+\c@savedafterword=\count377
+\c@annotator=\count378
+\c@savedannotator=\count379
+\c@author=\count380
+\c@savedauthor=\count381
+\c@bookauthor=\count382
+\c@savedbookauthor=\count383
+\c@commentator=\count384
+\c@savedcommentator=\count385
+\c@editor=\count386
+\c@savededitor=\count387
+\c@editora=\count388
+\c@savededitora=\count389
+\c@editorb=\count390
+\c@savededitorb=\count391
+\c@editorc=\count392
+\c@savededitorc=\count393
+\c@foreword=\count394
+\c@savedforeword=\count395
+\c@holder=\count396
+\c@savedholder=\count397
+\c@introduction=\count398
+\c@savedintroduction=\count399
+\c@namea=\count400
+\c@savednamea=\count401
+\c@nameb=\count402
+\c@savednameb=\count403
+\c@namec=\count404
+\c@savednamec=\count405
+\c@translator=\count406
+\c@savedtranslator=\count407
+\c@shortauthor=\count408
+\c@savedshortauthor=\count409
+\c@shorteditor=\count410
+\c@savedshorteditor=\count411
+\c@booktranslator=\count412
+\c@savedbooktranslator=\count413
+\c@bookcommentator=\count414
+\c@savedbookcommentator=\count415
+\c@bookannotator=\count416
+\c@savedbookannotator=\count417
+\c@bookintroduction=\count418
+\c@savedbookintroduction=\count419
+\c@bookforeword=\count420
+\c@savedbookforeword=\count421
+\c@bookafterword=\count422
+\c@savedbookafterword=\count423
+\c@labelname=\count424
+\c@savedlabelname=\count425
+\c@institution=\count426
+\c@savedinstitution=\count427
+\c@lista=\count428
+\c@savedlista=\count429
+\c@listb=\count430
+\c@savedlistb=\count431
+\c@listc=\count432
+\c@savedlistc=\count433
+\c@listd=\count434
+\c@savedlistd=\count435
+\c@liste=\count436
+\c@savedliste=\count437
+\c@listf=\count438
+\c@savedlistf=\count439
+\c@location=\count440
+\c@savedlocation=\count441
+\c@organization=\count442
+\c@savedorganization=\count443
+\c@origlocation=\count444
+\c@savedoriglocation=\count445
+\c@origpublisher=\count446
+\c@savedorigpublisher=\count447
+\c@publisher=\count448
+\c@savedpublisher=\count449
+\c@language=\count450
+\c@savedlanguage=\count451
+\c@origlanguage=\count452
+\c@savedoriglanguage=\count453
+\c@bookoriglanguage=\count454
+\c@savedbookoriglanguage=\count455
+\c@specdata=\count456
+\c@savedspecdata=\count457
+\c@credits=\count458
+\c@savedcredits=\count459
+\c@bookcredits=\count460
+\c@savedbookcredits=\count461
+\c@editioncredits=\count462
+\c@savededitioncredits=\count463
+\c@pageref=\count464
+\c@savedpageref=\count465
+\shorthandwidth=\skip86
+\shortjournalwidth=\skip87
+\shortserieswidth=\skip88
+\shorttitlewidth=\skip89
+\shortauthorwidth=\skip90
+\shorteditorwidth=\skip91
+\locallabelnumberwidth=\skip92
+\locallabelalphawidth=\skip93
+\localshorthandwidth=\skip94
+\localshortjournalwidth=\skip95
+\localshortserieswidth=\skip96
+\localshorttitlewidth=\skip97
+\localshortauthorwidth=\skip98
+\localshorteditorwidth=\skip99
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count466
+\c@textcitetotal=\count467
+\c@textcitemaxnames=\count468
+\c@biburlbigbreakpenalty=\count469
+\c@biburlbreakpenalty=\count470
+\c@biburlnumpenalty=\count471
+\c@biburlucpenalty=\count472
+\c@biburllcpenalty=\count473
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count474
+)
+Package biblatex Info: Trying to load bibliography style 'gost-numeric'...
+Package biblatex Info: ... file 'gost-numeric.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/gost-numeric.bbx
+File: gost-numeric.bbx 2021/05/08 v1.22 biblatex-gost styles
+Package biblatex Info: Trying to load bibliography style 'gost-standard'...
+Package biblatex Info: ... file 'gost-standard.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/gost-standard.bbx
+File: gost-standard.bbx 2021/05/08 v1.22 biblatex-gost styles
+Package biblatex Info: Trying to load biblatex-gost generic definitions...
+Package biblatex Info: ... file 'biblatex-gost.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/biblatex-gost.def
+File: biblatex-gost.def 2021/05/08 v1.22 biblatex-gost styles
+)
+\c@blx@gost@pointer=\count475
+\c@bbx:relatedcount=\count476
+\c@bbx:relatedtotal=\count477
+Package biblatex Info: Redefining autocite command 'footnote'.
+Package biblatex Info: Redefining autocite command 'superscript'.
+))
+Package biblatex Info: Trying to load citation style 'gost-numeric'...
+Package biblatex Info: ... file 'gost-numeric.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/gost-numeric.cbx
+File: gost-numeric.cbx 2021/05/08 v1.22 biblatex-gost styles
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count478
+\c@cbx@tempcntb=\count479
+\c@cbx@tempcntc=\count480
+\c@cbx@tempcntd=\count481
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2023-02-22 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count482
+\l__lipsum_a_int=\count483
+\l__lipsum_b_int=\count484
+
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count485
+\@quotereset=\count486
+(./preamble.aux
+
+LaTeX Warning: Label `eqn:agg_ports' multiply defined.
+
+
+LaTeX Warning: Label `eqn:agg_ports' multiply defined.
+
+
+LaTeX Warning: Label `eqn:agg_ports' multiply defined.
+
+
+LaTeX Warning: Label `eqn:agg_ports' multiply defined.
+
+
+LaTeX Warning: Label `eqn:agg_ports' multiply defined.
+
+
+LaTeX Warning: Label `eqn:agg_ports' multiply defined.
+
+)
+\openout1 = `preamble.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 453.
+LaTeX Font Info:    ... okay on input line 453.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 453.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 453.
+Package hyperref Info: Link coloring ON on input line 453.
+ (./preamble.out) (./preamble.out)
+\@outlinefile=\write4
+\openout4 = `preamble.out'.
+
+\c@lstlisting=\count487
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 483.69687pt, 28.45274pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-54.36449pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=14.0pt
+* \footskip=30.0pt
+* \marginparwidth=15.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package newfloat Info: Trying Plan B...
+Package newfloat Info: `float' package detected.
+Package biblatex Info: Trying to load language 'english' -> 'english-gost'...
+Package biblatex Info: ... file 'english-gost.lbx' found.
+(/usr/share/texmf-dist/tex/latex/biblatex-gost/english-gost.lbx
+File: english-gost.lbx 2021/05/08 v1.22 biblatex-gost styles
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `preamble.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'preamble.bbl' found.
+ (./preamble.bbl)
+Package biblatex Info: Reference section=0 on input line 453.
+Package biblatex Info: Reference segment=0 on input line 453.
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 1>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 1>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 1>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 1>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 1>
+
+[1
+
+]
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 2>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 2>
+File: ../misc/title.pdf Graphic file (type pdf)
+<use ../misc/title.pdf, page 2>
+ [2] (./preamble.toc)
+\tf@toc=\write5
+\openout5 = `preamble.toc'.
+
+ [3]
+Underfull \hbox (badness 3815) in paragraph at lines 469--470
+\TU/TimesNewRoman(0)/m/n/14.4 значительную роль в повседневной жизни и деятельн
+ости организаций.
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 469--470
+\TU/TimesNewRoman(0)/m/n/14.4 сервисная сеть передачи данных является важным ус
+ловием успешной и
+ []
+
+
+Underfull \hbox (badness 4859) in paragraph at lines 471--472
+[]\TU/TimesNewRoman(0)/m/n/14.4 Актуальность данной темы обусловлена быстрым ро
+стом объемов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+\TU/TimesNewRoman(0)/m/n/14.4 передаваемой информации и необходимостью внедрени
+я современных
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+\TU/TimesNewRoman(0)/m/n/14.4 технологий в процессе проектирования сервисных се
+тей передачи
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 473--474
+[]\TU/TimesNewRoman(0)/m/n/14.4 Объектом исследования является сервисная сеть п
+ередачи данных,
+ []
+
+
+Underfull \hbox (badness 6364) in paragraph at lines 473--474
+\TU/TimesNewRoman(0)/m/n/14.4 предметом исследования — особенности проектирован
+ия и реализации
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 473--474
+\TU/TimesNewRoman(0)/m/n/14.4 закупкой и разливом воды. Цель работы состоит в п
+ланировании и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+[]\TU/TimesNewRoman(0)/m/n/14.4 Провести планирование адресации и маршрутизации
+ сети
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 481--482
+[]\TU/TimesNewRoman(0)/m/n/14.4 Выполнить планирование таких служб, как файлова
+я, служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
+[]\TU/TimesNewRoman(0)/m/n/14.4 Провести расчет сервисной нагрузки по результат
+ам
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 486--487
+\TU/TimesNewRoman(0)/m/n/14.4 инструменты, такие как Cisco Packet Tracer, Apach
+e, которые позволяют
+ []
+
+[4
+
+]
+Underfull \hbox (badness 4940) in paragraph at lines 488--489
+[]\TU/TimesNewRoman(0)/m/n/14.4 Основными источниками информации для работы ста
+нут научные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
+\TU/TimesNewRoman(0)/m/n/14.4 публикации, учебники и интернет-ресурсы, посвящен
+ные технологиям
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 493--494
+\TU/TimesNewRoman(0)/m/n/14.4 данных, их применение в процессе проектирования с
+етей для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+[]\TU/TimesNewRoman(0)/m/n/14.4 Изучение специфики деятельности предприятия, ан
+ализ
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 495--496
+[]\TU/TimesNewRoman(0)/m/n/14.4 Разработка схемы адресации и маршрутизации сети
+ передачи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проектирование виртуальных и локальных сетей дл
+я
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 497--498
+[]\TU/TimesNewRoman(0)/m/n/14.4 Создание прототипа сети передачи данных с испол
+ьзованием
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 498--499
+[]\TU/TimesNewRoman(0)/m/n/14.4 Выполнение планирования файловых сетевых, служб
+ времени,
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 500--501
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проведение расчетов для определения сервисной н
+агрузки по
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
+\TU/TimesNewRoman(0)/m/n/14.4 решение по проектированию сети сервисной передачи
+ данных для
+ []
+
+
+Underfull \hbox (badness 7576) in paragraph at lines 504--505
+\TU/TimesNewRoman(0)/m/n/14.4 предприятия, осуществляющего закупку и разлив вод
+ы, что позволит
+ []
+
+[5] [6]
+Underfull \hbox (badness 1789) in paragraph at lines 530--531
+[]\TU/TimesNewRoman(0)/m/n/14.4 Описываемое предприятие состоит из офиса и одно
+го склада. На
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
+\TU/TimesNewRoman(0)/m/n/14.4 рисунке[][]1.1[][] в виде диаграммы изображена ор
+ганизационная структура
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
+\TU/TimesNewRoman(0)/m/n/14.4 предприятия для точного представления распределен
+ия работников
+ []
+
+File: ../misc/org_structure_people.png Graphic file (type bmp)
+<../misc/org_structure_people.png>
+File: ../misc/org_structure_ARM_oz.png Graphic file (type bmp)
+<../misc/org_structure_ARM_oz.png>
+[7]
+Underfull \hbox (badness 5374) in paragraph at lines 551--552
+[]\TU/TimesNewRoman(0)/m/n/14.4 На складе всего 30 сотрудников из которых 19 со
+трудников это
+ []
+
+File: ../misc/org_structure_ARM_sk.png Graphic file (type bmp)
+<../misc/org_structure_ARM_sk.png>
+
+Underfull \hbox (badness 6316) in paragraph at lines 560--561
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для всех отделов, основного здания и склада, ко
+личество АРМ
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 560--561
+\TU/TimesNewRoman(0)/m/n/14.4 совпадает с количеством сотрудников, кроме хозяйс
+твенной службы, где
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 560--561
+\TU/TimesNewRoman(0)/m/n/14.4 только заведующий по хозяйству имеет АРМ и службы
+ охраны, которая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 566--566
+ |\TU/TimesNewRoman(0)/b/n/16 1.2 Расчет пропускной способности каналов передач
+и
+ []
+
+[8]
+Underfull \hbox (badness 4518) in paragraph at lines 571--572
+\TU/TimesNewRoman(0)/m/n/14.4 будет 100 Мбит/с и 1 Гбит/с для конечных пользова
+телей с особыми
+ []
+
+
+Overfull \hbox (2.56715pt too wide) in paragraph at lines 603--603
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
+[]|\TU/TimesNewRoman(0)/m/n/12 Требования к каналу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
+\TU/TimesNewRoman(0)/m/n/12 передачи данных,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
+[]|\TU/TimesNewRoman(0)/m/n/12 Конечная нагрузка на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Overfull \hbox (2.56715pt too wide) in paragraph at lines 624--624
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--624
+[]|\TU/TimesNewRoman(0)/m/n/12 Требования к каналу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--624
+\TU/TimesNewRoman(0)/m/n/12 передачи данных,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--624
+[]|\TU/TimesNewRoman(0)/m/n/12 Конечная нагрузка на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+[]\TU/TimesNewRoman(0)/m/n/14.4 Итоговое количество портов полученное на уровне
+ доступа для
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 627--628
+\TU/TimesNewRoman(0)/m/n/14.4 кортов на уровне доступа рассчитывается количеств
+о портов на уровне
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для расчета количества портов на уровне агрегац
+ии исходя из
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 629--630
+\TU/TimesNewRoman(0)/m/n/14.4 Документооборот, которое не требует особых требов
+аний к постоянному
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 629--630
+\TU/TimesNewRoman(0)/m/n/14.4 широкополосному каналу передачи данных. С другой 
+стороны сервера,
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 629--630
+\TU/TimesNewRoman(0)/m/n/14.4 подключенные по GigabitEthernet будут тратить бол
+ее 90% постоянно по
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 629--630
+\TU/TimesNewRoman(0)/m/n/14.4 причине развертывания на них различных сервисов, 
+в том числе сервера
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 629--630
+\TU/TimesNewRoman(0)/m/n/14.4 при решении своих задач. В данном расчете для сер
+веров будет взят
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 646--647
+[]\TU/TimesNewRoman(0)/m/n/14.4 На основе произведенных выше расчетов и таблиц 
+более полный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Требования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+\TU/TimesNewRoman(0)/m/n/12 к каналу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+\TU/TimesNewRoman(0)/m/n/12 передачи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+\TU/TimesNewRoman(0)/m/n/12 данных,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+\TU/TimesNewRoman(0)/m/n/12 требования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+\TU/TimesNewRoman(0)/m/n/12 на отдел,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Портов
+ []
+
+
+Overfull \hbox (5.50874pt too wide) in paragraph at lines 678--678
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Портов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]|\TU/TimesNewRoman(0)/m/n/12 Отдел
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Требования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+\TU/TimesNewRoman(0)/m/n/12 к каналу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+\TU/TimesNewRoman(0)/m/n/12 передачи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+\TU/TimesNewRoman(0)/m/n/12 данных,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+\TU/TimesNewRoman(0)/m/n/12 требования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+\TU/TimesNewRoman(0)/m/n/12 на отдел,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Портов
+ []
+
+
+Overfull \hbox (5.50874pt too wide) in paragraph at lines 702--702
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Портов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Отдел
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 ИТ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 100х15
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Overfull \hbox (4.64156pt too wide) in paragraph at lines 702--702
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Требования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+\TU/TimesNewRoman(0)/m/n/12 к каналу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+\TU/TimesNewRoman(0)/m/n/12 передачи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+\TU/TimesNewRoman(0)/m/n/12 данных,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+\TU/TimesNewRoman(0)/m/n/12 требования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+\TU/TimesNewRoman(0)/m/n/12 на отдел,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Портов
+ []
+
+
+Overfull \hbox (5.50874pt too wide) in paragraph at lines 723--723
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Портов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 3х100
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Overfull \hbox (4.64156pt too wide) in paragraph at lines 723--723
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 726--727
+\TU/TimesNewRoman(0)/m/n/14.4 40% для перехода на уровень агрегации по причине 
+того, что будут
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 757--757
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--757
+\TU/TimesNewRoman(0)/m/n/12 требования на
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 757--757
+[]|\TU/TimesNewRoman(0)/m/n/12 Объем трафика при
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--757
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество портов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--757
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--757
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--757
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+
+Underfull \hbox (badness 5302) in paragraph at lines 792--793
+[]\TU/TimesNewRoman(0)/m/n/14.4 Исходя из данных таблицы расчета портов на уров
+не агрегации,
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 792--793
+\TU/TimesNewRoman(0)/m/n/14.4 для уровня ядра требуется минимум 9 портов Gigabi
+tEthernet в основном
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
+\TU/TimesNewRoman(0)/m/n/12 требования на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
+[]|\TU/TimesNewRoman(0)/m/n/12 Объем трафика на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество портов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
+\TU/TimesNewRoman(0)/m/n/12 на уровне ядра,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+\TU/TimesNewRoman(0)/m/n/12 требования на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+[]|\TU/TimesNewRoman(0)/m/n/12 Объем трафика на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество портов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+\TU/TimesNewRoman(0)/m/n/12 на уровне ядра,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+[12]
+Underfull \hbox (badness 2359) in paragraph at lines 873--874
+[]\TU/TimesNewRoman(0)/m/n/14.4 Расчеты выведенные в таблицах выше являются пре
+дварительными
+ []
+
+
+Underfull \hbox (badness 5288) in paragraph at lines 873--874
+\TU/TimesNewRoman(0)/m/n/14.4 для построения первого чернового прототипа и выбо
+ра устройств для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--880
+[]\TU/TimesNewRoman(0)/m/n/14.4 В Таблицах[][]1.13[][] -[][]1.11[][] описаны сп
+ецификации промежуточных
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 используются. Для сети главного здания используют
+ся маршрутизатор
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 4331, так как имеет 3 порта GigabitEthernet, что 
+является необходимым
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 количеством для соединения с коммутаторами L3, ко
+ммутаторы L3 3650
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 и порты 1/0/2 коммутаторов SW_1-2_L3_DERDZYAN име
+ют пропускную
+ []
+
+
+Underfull \hbox (badness 7888) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 здании выступают персональные компьютеры. На Рису
+нках[][]1.4[][] -[][]1.5[][]
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 изображена топология сети основного здания на осн
+ове Таблиц[][]1.13[][] -
+ []
+
+
+Underfull \hbox (badness 5832) in paragraph at lines 879--880
+\TU/TimesNewRoman(0)/m/n/14.4 пропускная способность каналов для них между комм
+утаторами L3 и
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Общее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+\TU/TimesNewRoman(0)/m/n/12 количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Используемые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+\TU/TimesNewRoman(0)/m/n/12 порты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+\TU/TimesNewRoman(0)/m/n/12 (названия,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Свободные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+\TU/TimesNewRoman(0)/m/n/12 порты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+\TU/TimesNewRoman(0)/m/n/12 (названия,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Маршрутизатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 3 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор L3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор L3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор L3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор L3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 Модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 Общее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 Используемые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 порты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 (названия,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 Свободные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 порты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 (названия,
+ []
+
+
+Overfull \hbox (4.59804pt too wide) in paragraph at lines 960--960
+[]|[]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_2_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 FastEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 0/1 - 0/10,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_3_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 FastEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 0/1 - 0/10,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_4_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 FastEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 0/1 - 0/12,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_5_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 FastEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 0/1 - 0/12,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_6_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 FastEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 0/1 - 0/10,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор L3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_7_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Overfull \hbox (4.59804pt too wide) in paragraph at lines 960--960
+[]|[]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_8_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_9_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 Модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 Общее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 Используемые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 порты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 (названия,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 Свободные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 порты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 (названия,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 Маршрутизатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 24 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 FastEthernet,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 2 порта
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 1/0/1 - 1/0/2,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
+\TU/TimesNewRoman(0)/m/n/12 FastEthernet
+ []
+
+[15]
+File: ../misc/topo_oz.png Graphic file (type bmp)
+<../misc/topo_oz.png>
+File: ../misc/topo_sk.png Graphic file (type bmp)
+<../misc/topo_sk.png>
+ [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 1158--1159
+\TU/TimesNewRoman(0)/m/n/14.4 виртуальных локальных сетей (VLAN).Виртуальные ло
+кальные сети
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 1158--1159
+\TU/TimesNewRoman(0)/m/n/14.4 разделены на сервисные VLAN, управляющие VLAN и в
+заимосвязанные
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 1158--1159
+\TU/TimesNewRoman(0)/m/n/14.4 могут взаимодействовать друг с другом, независимо
+ от их физического
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 1160--1161
+[]\TU/TimesNewRoman(0)/m/n/14.4 Использование технологии VLAN[[][]3[][]] позвол
+яет предприятиям более
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 1160--1161
+\TU/TimesNewRoman(0)/m/n/14.4 маршрутизаторы и обеспечивать лучшую изоляцию и б
+езопасность для
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 1162--1163
+\TU/TimesNewRoman(0)/m/n/14.4 предназначена для обеспечения доступности сервисо
+в для пользователей.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1164--1165
+[]\TU/TimesNewRoman(0)/m/n/14.4 Управляющий VLAN используется для удаленного до
+ступа к
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 1164--1165
+\TU/TimesNewRoman(0)/m/n/14.4 виртуального интерфейса VLAN в качестве адресов у
+правления. Все
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 1164--1165
+\TU/TimesNewRoman(0)/m/n/14.4 VLAN, а их IP-адреса управления находятся в одном
+ сегменте сети.
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 1164--1165
+\TU/TimesNewRoman(0)/m/n/14.4 Взаимосвязанные VLAN нужны для соединения устройс
+тв при переходе
+ []
+
+[18]
+Underfull \hbox (badness 1270) in paragraph at lines 1168--1169
+[]\TU/TimesNewRoman(0)/m/n/14.4 Сеть VLAN подразделяется на гостевую VLAN и так
+ же для
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 1169--1170
+[]\TU/TimesNewRoman(0)/m/n/14.4 Коммутаторы уровня 3 подключены к маршрутизатор
+ам через
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+[]|\TU/TimesNewRoman(0)/m/n/12 Управляющая VLAN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+[]|\TU/TimesNewRoman(0)/m/n/12 Взаимосвязанная VLAN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+\TU/TimesNewRoman(0)/m/n/12 между SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+\TU/TimesNewRoman(0)/m/n/12 DERDZYAN и R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+[]|\TU/TimesNewRoman(0)/m/n/12 Взаимосвязанная VLAN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+\TU/TimesNewRoman(0)/m/n/12 между SW_2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+\TU/TimesNewRoman(0)/m/n/12 DERDZYAN и R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+[]|\TU/TimesNewRoman(0)/m/n/12 Взаимосвязанная VLAN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+\TU/TimesNewRoman(0)/m/n/12 между SW_3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1196
+\TU/TimesNewRoman(0)/m/n/12 DERDZYAN и R_1_
+ []
+
+[19]
+Underfull \hbox (badness 5592) in paragraph at lines 1267--1268
+[]\TU/TimesNewRoman(0)/m/n/14.4 Ниже представлена таблица с описанием устройств
+ их портов и
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 1267--1268
+\TU/TimesNewRoman(0)/m/n/14.4 устройство. Trunk port или магистральный порт — п
+орт, передающий
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 1267--1268
+\TU/TimesNewRoman(0)/m/n/14.4 устройствами. Для маршрутизатора в поле access ук
+азаны отношения
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 Описание
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_2-3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-9_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1, 3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-9_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 R_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+[]|\TU/TimesNewRoman(0)/m/n/12 S_1_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 Описание
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-8_RUK_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_2_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-10_BUX_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_3_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-10_KAD_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_4_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-12_ZAK_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_5_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-10_PRO_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_6_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-10_ANA_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_7_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1-20_IT_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_8_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1_BEZ_
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+[]|\TU/TimesNewRoman(0)/m/n/12 Описание
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_9_L2_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+[]|\TU/TimesNewRoman(0)/m/n/12 SW_1-2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+[]|\TU/TimesNewRoman(0)/m/n/12 PC_1_XOZ_
+ []
+
+[21]
+Underfull \hbox (badness 1635) in paragraph at lines 1400--1401
+\TU/TimesNewRoman(0)/m/n/14.4 прокол связующего дерева[[][]4[][]] (STP), а в ча
+стности его модификация под
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1402--1403
+[]\TU/TimesNewRoman(0)/m/n/14.4 Принцип работы RSTP - выбирается корневой комму
+татор (root
+ []
+
+
+Underfull \hbox (badness 4699) in paragraph at lines 1402--1403
+\TU/TimesNewRoman(0)/m/n/14.4 switch), затем каждый коммутатор, участвующий в п
+остроении дерева,
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 1402--1403
+\TU/TimesNewRoman(0)/m/n/14.4 ищет кратчайший маршрут (с учётом пропускной спос
+обности канала) к
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 1402--1403
+\TU/TimesNewRoman(0)/m/n/14.4 строя основных линий, ожидающие линии используютс
+я для построения
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 1404--1405
+[]\TU/TimesNewRoman(0)/m/n/14.4 В конфигурации RSTP достаточно настроить SW_1_L
+3_DERDZYAN
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 1435--1436
+\TU/TimesNewRoman(0)/m/n/14.4 параметры сети главного здания предприятия. В Таб
+лице используются
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 1435--1436
+\TU/TimesNewRoman(0)/m/n/14.4 в процессе планирования и проектирования сетевой 
+архитектуры. Оно
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 1435--1436
+\TU/TimesNewRoman(0)/m/n/14.4 узлов относится к максимальному количеству устрой
+ств, которые могут
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 1435--1436
+\TU/TimesNewRoman(0)/m/n/14.4 количеством бит, которые могут быть использованы 
+для идентификации
+ []
+
+[22]
+Underfull \hbox (badness 4254) in paragraph at lines 1437--1438
+[]\TU/TimesNewRoman(0)/m/n/14.4 Так же стоит учесть, что сеть разбита на подсет
+и по принципу
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 1455--1456
+[]\TU/TimesNewRoman(0)/m/n/14.4 Исходя из требований для внутренних локальных с
+етей в основном
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
+\TU/TimesNewRoman(0)/m/n/14.4 выбран диапазона частных адресов класса «С» от 19
+2.168.0.0 до
+ []
+
+[23]
+Underfull \hbox (badness 3668) in paragraph at lines 1465--1466
+[]\TU/TimesNewRoman(0)/m/n/14.4 Результат планирования и распределения IP-адрес
+ов представлен в
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 1482--1482
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент управляющей сети
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 для устройств уровня 2 со
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1482--1482
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 7151) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 относится руководство, со
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1482--1482
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 относится бухгалтерия, со
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1482--1482
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 относится IT-отдел, со
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 шлюзом, расположенным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 на коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 относится служба
+ []
+
+
+Underfull \hbox (badness 7540) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 безопасности, со шлюзом,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 расположенным на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети, к которому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 относится хозяйственная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 служба, со шлюзом,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 расположенным на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 коммутаторе уровня
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+[]|\TU/TimesNewRoman(0)/m/n/12 Сегмент сети,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 предназначенный для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 сервисов развернутых
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 на сервере, со шлюзом,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 расположенным на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1501
+\TU/TimesNewRoman(0)/m/n/12 коммутаторе уровня
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 1535--1536
+[]\TU/TimesNewRoman(0)/m/n/14.4 IP-адреса WAN-интерфейсов на выходных шлюзах на
+значаются
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 1535--1536
+\TU/TimesNewRoman(0)/m/n/14.4 оператором связи в статическом режиме. IP-адреса 
+выходных шлюзов
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Описание режима
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 192.168.101.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.102.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.103.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.104.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.105.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.106.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.107.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 192.168.108.0/24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Распределяется
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 коммутатором уровня
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 динамические IP-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 адреса на конечные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 устройства пользователей
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 и фиксированные IP-адреса
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Распределяется на уровне
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 агрегации. Он выдает
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Статически настроенные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+\TU/TimesNewRoman(0)/m/n/12 IP-адреса управления
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Статически настроенный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Статически настроенный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 Статически настроенный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 GigabitEthernet 0/4 на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/TimesNewRoman(0)/m/n/12 IP-адрес, назначенный
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 1620--1621
+\TU/TimesNewRoman(0)/m/n/14.4 кампусной сети включает в себя проектирование вну
+тренних маршрутов.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1621
+\TU/TimesNewRoman(0)/m/n/14.4 Проектирование внутренней маршрутизации средней к
+ампусной сети
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 1620--1621
+\TU/TimesNewRoman(0)/m/n/14.4 соответствует требованиям к связи устройств и тер
+миналов кампусной
+ []
+
+[26]
+Underfull \hbox (badness 1824) in paragraph at lines 1622--1623
+\TU/TimesNewRoman(0)/m/n/14.4 шлюза уровня 3. Межсетевой сегмент. Для соответст
+вия требованиям
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 1622--1623
+\TU/TimesNewRoman(0)/m/n/14.4 статические маршруты будут развернуты на всех уст
+ройствах, которым
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Метод назначения
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Режим
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Статические адреса;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 SW_1-3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Маршруты по
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 умолчанию,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 направленные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 на SW_1-3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть управления
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Статические адреса
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Включены OSPF
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 и отношения
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 соседства,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 маршрутизатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 организации связи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 между SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 организации связи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 между SW_2_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 организации связи
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1664
+\TU/TimesNewRoman(0)/m/n/12 между SW_3_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Метод назначения
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Режим
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Назначение
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+\TU/TimesNewRoman(0)/m/n/12 выполняет
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+\TU/TimesNewRoman(0)/m/n/12 SW_1_L3_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+\TU/TimesNewRoman(0)/m/n/12 DERDZYAN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Анонсирование
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+\TU/TimesNewRoman(0)/m/n/12 в OSPF через
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+\TU/TimesNewRoman(0)/m/n/12 шлюзовые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть отдела
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть IT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть службы
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 1705--1705
+[]|\TU/TimesNewRoman(0)/m/n/12 Сеть хозяйственной
+ []
+
+[27]
+Underfull \hbox (badness 6708) in paragraph at lines 1738--1739
+[]\TU/TimesNewRoman(0)/m/n/14.4 ACL (Access Control List) — список правил, запр
+ещающих или
+ []
+
+File: ../misc/fieltre.png Graphic file (type bmp)
+<../misc/fieltre.png>
+[28]
+Underfull \hbox (badness 1221) in paragraph at lines 1753--1754
+[]\TU/TimesNewRoman(0)/m/n/14.4 На основе схемы созданы списки контроля доступа
+ (ACL), которые
+ []
+
+
+Underfull \hbox (badness 5847) in paragraph at lines 1753--1754
+\TU/TimesNewRoman(0)/m/n/14.4 контролируют и фильтруют взаимодействие и передач
+у данных между
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 1753--1754
+\TU/TimesNewRoman(0)/m/n/14.4 отделами. Такое решение обусловлено тем, что треб
+уемое программное
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1758--1758
+ |\TU/TimesNewRoman(0)/b/n/16 1.7 Планирование политик обеспечения качества
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1760
+[]\TU/TimesNewRoman(0)/m/n/14.4 В системе классификации трафика выделены четыре
+ категории:
+ []
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 1761--1762
+[]\TU/TimesNewRoman(0)/m/n/14.4 Стандартная пересылка используется для узлов, н
+е маркирующих
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
+[]\TU/TimesNewRoman(0)/m/n/14.4 Введены четыре класса моделей поведения с гаран
+тированной
+ []
+
+
+Underfull \hbox (badness 8019) in paragraph at lines 1763--1764
+\TU/TimesNewRoman(0)/m/n/14.4 пакеты с высокой вероятностью будут отброшены ран
+ьше остальных.
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 1800--1801
+[]\TU/TimesNewRoman(0)/m/n/14.4 Определенные модели поведения, по которой трафи
+к должен быть
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1821
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба управление
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1821
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1821
+\TU/TimesNewRoman(0)/m/n/12 динамического
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1821
+\TU/TimesNewRoman(0)/m/n/12 конфигурирования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1821
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба доменных
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1827--1828
+[]\TU/TimesNewRoman(0)/m/n/14.4 DNS сервер для предприятия развернут в рамах пр
+ограммного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1830--1831
+[]\TU/TimesNewRoman(0)/m/n/14.4 Централизованное управление идентификацией: Fre
+eIPA
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 1830--1831
+\TU/TimesNewRoman(0)/m/n/14.4 получаете управление пользователями, группами, хо
+стами и
+ []
+
+[30]
+Underfull \hbox (badness 7832) in paragraph at lines 1831--1832
+\TU/TimesNewRoman(0)/m/n/14.4 для аутентификации и LDAP для хранения информации
+ о
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 1831--1832
+\TU/TimesNewRoman(0)/m/n/14.4 пользователях и политиках. Это позволяет создават
+ь более
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1832--1833
+[]\TU/TimesNewRoman(0)/m/n/14.4 Безопасность: FreeIPA предлагает расширенные фу
+нкции
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1833--1834
+[]\TU/TimesNewRoman(0)/m/n/14.4 Автоматизация и упрощение администрирования: Fr
+eeIPA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1833--1834
+\TU/TimesNewRoman(0)/m/n/14.4 позволяет автоматизировать и упрощать многие проц
+ессы
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 1836--1837
+\TU/TimesNewRoman(0)/m/n/14.4 обеспечения FreeIPA. Этот выбор обеспечивает инте
+грированное решение
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 1836--1837
+\TU/TimesNewRoman(0)/m/n/14.4 DNS-сервисы. Преимущества включают централизованн
+ое управление,
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 1836--1837
+\TU/TimesNewRoman(0)/m/n/14.4 повышенную безопасность и упрощенное администриро
+вание, что делает
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1837
+\TU/TimesNewRoman(0)/m/n/14.4 FreeIPA предпочтительным выбором для современной 
+инфраструктуры
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 1838--1839
+[]\TU/TimesNewRoman(0)/m/n/14.4 Результаты планирования службы доменных имен пр
+едставлены в
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1873--1873
+[]|\TU/TimesNewRoman(0)/m/n/12 Конфигурируется автоматически
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1873--1873
+[]|\TU/TimesNewRoman(0)/m/n/12 Конфигурируется автоматически
+ []
+
+[31]
+Underfull \hbox (badness 1189) in paragraph at lines 1879--1880
+[]\TU/TimesNewRoman(0)/m/n/14.4 В данном пункте осуществляется планирование пол
+итик управления
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1879--1880
+\TU/TimesNewRoman(0)/m/n/14.4 пользователями, сфокусированное на развертывании 
+программного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1879--1880
+\TU/TimesNewRoman(0)/m/n/14.4 обеспечения FreeIPA. План включает в себя выделен
+ие ключевых
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1881--1882
+\TU/TimesNewRoman(0)/m/n/14.4 безопасности, параметры централизованного управле
+ния и аудита.
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 1881--1882
+\TU/TimesNewRoman(0)/m/n/14.4 Преимущества выбора FreeIPA связаны с его интегри
+рованным решением
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1904--1905
+[]\TU/TimesNewRoman(0)/m/n/14.4 В рамках плана также определены параметры платф
+ормы для
+ []
+
+
+Underfull \hbox (badness 5359) in paragraph at lines 1904--1905
+\TU/TimesNewRoman(0)/m/n/14.4 оперативной памяти, поддерживаемая версия операци
+онной системы, а
+ []
+
+[32]
+Underfull \hbox (badness 5345) in paragraph at lines 1924--1925
+[]\TU/TimesNewRoman(0)/m/n/14.4 В данном пункте осуществляется планирование кон
+фигурирования
+ []
+
+
+Underfull \hbox (badness 7796) in paragraph at lines 1926--1927
+\TU/TimesNewRoman(0)/m/n/14.4 с использованием необходимого пакета – isc-dhcpd 
+version 4.4.3-P1 и
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 1928--1929
+[]\TU/TimesNewRoman(0)/m/n/14.4 Планирование распределения адресов по подсетям 
+представлено в
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1979--1980
+\TU/TimesNewRoman(0)/m/n/14.4 запросы DHCP от клиентов через сетевые устройства
+, такие как
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 1979--1980
+\TU/TimesNewRoman(0)/m/n/14.4 трафик между подсетями ограничен или невозможен и
+з-за разграничений
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 1985--1986
+\TU/TimesNewRoman(0)/m/n/14.4 chrony, которое состоит из двух компонентов, chro
+nyd - служба, которая
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 1985--1986
+\TU/TimesNewRoman(0)/m/n/14.4 в фоновом режиме поддерживает работу времени и ch
+ronyc - интерфейс
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 1987--1988
+\TU/TimesNewRoman(0)/m/n/14.4 конфигурационный файл серверами, которые находятс
+я вблизи локации
+ []
+
+[34]
+Underfull \hbox (badness 1953) in paragraph at lines 1989--1990
+[]\TU/TimesNewRoman(0)/m/n/14.4 Apache — веб-сервер, распространяемый бесплатно
+. Программное
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 1989--1990
+\TU/TimesNewRoman(0)/m/n/14.4 и гибкость. Apache[[][]8[][]] работает по принцип
+у модулей. Клиент сначала
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 1991--1992
+\TU/TimesNewRoman(0)/m/n/14.4 компьютерах, и позволяет работать с этими файлами
+ точно так же, как
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 1991--1992
+\TU/TimesNewRoman(0)/m/n/14.4 и с локальными. Например, с помощью команд операц
+ионной системы
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 1991--1992
+\TU/TimesNewRoman(0)/m/n/14.4 пользователи могут создавать, удалять, считывать,
+ записывать и изменять
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 1993--1994
+[]\TU/TimesNewRoman(0)/m/n/14.4 В рамках предприятия было решено создать директ
+ории на сервере
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 1993--1994
+\TU/TimesNewRoman(0)/m/n/14.4 Адреса устройств для доступа к директориям будут 
+заданы, как подсети
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1998--1999
+[]\TU/TimesNewRoman(0)/m/n/14.4 В данном пункте необходимо оценить нагрузку на 
+сервер,
+ []
+
+[35]
+File: ../misc/NTP_wireshark.png Graphic file (type bmp)
+<../misc/NTP_wireshark.png>
+
+Overfull \hbox (0.90504pt too wide) in paragraph at lines 2007--2008
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 2011--2012
+[]\TU/TimesNewRoman(0)/m/n/14.4 При анализе данной транзакции было определено, 
+что количество
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 2011--2012
+\TU/TimesNewRoman(0)/m/n/14.4 пакетов в одной транзакции 2, а максимальный разм
+ер пакета 720 бит.
+ []
+
+LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
+(Font)              scaled to size 14.40152pt on input line 2014.
+LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
+(Font)              scaled to size 10.80115pt on input line 2014.
+LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
+(Font)              scaled to size 8.64091pt on input line 2014.
+LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
+(Font)              scaled to size 14.39845pt on input line 2014.
+LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
+(Font)              scaled to size 10.79884pt on input line 2014.
+LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
+(Font)              scaled to size 8.63907pt on input line 2014.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2031--2031
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2031--2031
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2031--2031
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2031--2031
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2060
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2060
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2060
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2060
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2060
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+[36]
+Underfull \hbox (badness 1540) in paragraph at lines 2063--2064
+[]\TU/TimesNewRoman(0)/m/n/14.4 В итоге за 9 часов (без вычета обеденного перер
+ыва) формируется
+ []
+
+
+Underfull \hbox (badness 5008) in paragraph at lines 2063--2064
+\TU/TimesNewRoman(0)/m/n/14.4 примерно 42000 транзакций для файловой службы, то
+ есть около 1.3
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 2063--2064
+\TU/TimesNewRoman(0)/m/n/14.4 транзакции в секунду, что примерно равно 0.0026 М
+бит/с. Это значит,
+ []
+
+File: ../misc/DNS_wireshark.png Graphic file (type bmp)
+<../misc/DNS_wireshark.png>
+
+Overfull \hbox (1.30655pt too wide) in paragraph at lines 2070--2071
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2082--2083
+[]\TU/TimesNewRoman(0)/m/n/14.4 Требуется обратить внимание на то, что количест
+во обращений
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2112
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2112
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2112
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2112
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2112
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2112
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 2115--2116
+[]\TU/TimesNewRoman(0)/m/n/14.4 В итоге за 8-часовой рабочий день формируется п
+римерно 168000
+ []
+
+File: ../misc/TCP_HTTP_wireshark.png Graphic file (type bmp)
+<../misc/TCP_HTTP_wireshark.png>
+
+Underfull \hbox (badness 3219) in paragraph at lines 2126--2127
+\TU/TimesNewRoman(0)/m/n/14.4 и HTTP. При анализе данной транзакции было опреде
+лено 12 пакетов,
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 2167--2168
+[]\TU/TimesNewRoman(0)/m/n/14.4 В итоге за 8-часовой рабочий день формируется п
+римерно 66820
+ []
+
+File: ../misc/NFS_wireshark.png Graphic file (type bmp)
+<../misc/NFS_wireshark.png>
+
+Overfull \hbox (1.30655pt too wide) in paragraph at lines 2173--2174
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 2169--2175
+[]\TU/TimesNewRoman(0)/m/n/14.4 На Рисунке[][]1.10[][] представлены пакеты, отв
+ечающие за NFS трафик.
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 2219--2220
+[]\TU/TimesNewRoman(0)/m/n/14.4 В итоге за 8-часовой рабочий день формируется п
+римерно 36820
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 2223--2224
+[]\TU/TimesNewRoman(0)/m/n/14.4 На Рисунке[][]1.11[][] представлены пакеты, отн
+осящиеся к службе
+ []
+
+File: ../misc/DHCP_wireshark.png Graphic file (type bmp)
+<../misc/DHCP_wireshark.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2240--2241
+[]\TU/TimesNewRoman(0)/m/n/14.4 Количество обращений к службе управления пользо
+вателям
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2267--2267
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2267--2267
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2267--2267
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2267--2267
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2267--2267
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2267--2267
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2280
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2280
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2280
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+[41]
+Underfull \hbox (badness 5893) in paragraph at lines 2283--2284
+[]\TU/TimesNewRoman(0)/m/n/14.4 В итоге за 8-часовой рабочий день формируется п
+римерно 4860
+ []
+
+File: ../misc/LDAP_wireshark.png Graphic file (type bmp)
+<../misc/LDAP_wireshark.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2304--2305
+[]\TU/TimesNewRoman(0)/m/n/14.4 Количество обращений к службе управления пользо
+вателям
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+\TU/TimesNewRoman(0)/m/n/12 обращений за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+[]|\TU/TimesNewRoman(0)/m/n/12 Всего пакетов за
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+[]|\TU/TimesNewRoman(0)/m/n/12 Руководство
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+[]|\TU/TimesNewRoman(0)/m/n/12 Служба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+[]|\TU/TimesNewRoman(0)/m/n/12 Хозяйственная
+ []
+
+[42]
+Underfull \hbox (badness 3895) in paragraph at lines 2348--2349
+[]\TU/TimesNewRoman(0)/m/n/14.4 В итоге за 8-часовой рабочий день формируется п
+римерно 39200
+ []
+
+
+Underfull \hbox (badness 2884) in paragraph at lines 2348--2349
+\TU/TimesNewRoman(0)/m/n/14.4 транзакций для службы управления пользователями, 
+то есть около 1.36
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 2348--2349
+\TU/TimesNewRoman(0)/m/n/14.4 транзакций в секунду, что примерно 2.26 Мбит/с. Э
+то значит, что на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2348--2349
+\TU/TimesNewRoman(0)/m/n/14.4 интерфейс коммутатора только от службы управления
+ пользователями
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2350--2351
+\TU/TimesNewRoman(0)/m/n/14.4 M/M/1 произведен расчет минимальной необходимой с
+корости канала
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2350--2351
+\TU/TimesNewRoman(0)/m/n/14.4 начинается отбрасывания пакетов, что не является 
+предпочтительным
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 2358--2359
+[]\TU/TimesNewRoman(0)/m/n/14.4 Сделан вывод, что канала в 1 Гбит/с хватит для 
+поддерживания
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2358--2359
+\TU/TimesNewRoman(0)/m/n/14.4 необходимой пропускной способности и работы серви
+сов, как было
+ []
+
+[43]
+Underfull \hbox (badness 7796) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 решено, что предварительный прототип полностью со
+ответствует сети
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 и не требует никаких модификаций. Стоит обратить 
+внимание на то,
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 что в доступных устройствах, с учетом модулей рас
+ширения, интерфейс
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 с максимальной пропускной способностью имеет тип 
+GigabitEthernet,
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 чего недостаточно для передачи необходимого колич
+ества трафика между
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 коммутаторами SW_1-2_L3_DERDZYAN и маршрутизаторо
+м. Для
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 2363--2364
+\TU/TimesNewRoman(0)/m/n/14.4 обеспечения требуемой скорости передачи данных сл
+едует использовать
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 устройств,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Стоимость
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 одного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 устройства,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Мощность
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 одного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 устройства,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 стоимость,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+\TU/TimesNewRoman(0)/m/n/12 мощность,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Маршрутизатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор L3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2379--2379
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Название
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Количество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 устройств,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Стоимость
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 одного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 устройства,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Мощность
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 одного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 устройства,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 стоимость,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Суммарная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+\TU/TimesNewRoman(0)/m/n/12 мощность,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Маршрутизатор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2393
+[]|\TU/TimesNewRoman(0)/m/n/12 Коммутатор
+ []
+
+[44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 2399--2400
+[]\TU/TimesNewRoman(0)/m/n/14.4 На первом этапе осуществляется моделирование се
+рвисов, где
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 2399--2400
+\TU/TimesNewRoman(0)/m/n/14.4 необходимо разработать и описать основные сервисы
+, предоставляемые
+ []
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 2399--2400
+\TU/TimesNewRoman(0)/m/n/14.4 сетью. Это включает четкое определение всех необх
+одимых сервисов,
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 2399--2400
+\TU/TimesNewRoman(0)/m/n/14.4 планирование их конфигурации, а также описание вз
+аимодействия этих
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 2401--2402
+\TU/TimesNewRoman(0)/m/n/14.4 включая расположение и связи между устройствами, 
+оценка требуемой
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 2401--2402
+\TU/TimesNewRoman(0)/m/n/14.4 пропускной способности и производительности, а та
+кже интеграция мер
+ []
+
+
+Underfull \hbox (badness 5578) in paragraph at lines 2401--2402
+\TU/TimesNewRoman(0)/m/n/14.4 безопасности для обеспечения защиты от несанкцион
+ированных утечек
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2403--2404
+[]\TU/TimesNewRoman(0)/m/n/14.4 Комбинированный подход этих двух этапов помогае
+т создать
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 2403--2404
+\TU/TimesNewRoman(0)/m/n/14.4 комплексную и эффективную модель сети, которая со
+ответствует всем
+ []
+
+File: ../misc/VMs.jpg Graphic file (type bmp)
+<../misc/VMs.jpg>
+[46]
+File: ../misc/DNS_zones.jpg Graphic file (type bmp)
+<../misc/DNS_zones.jpg>
+File: ../misc/DNS_records.jpg Graphic file (type bmp)
+<../misc/DNS_records.jpg>
+File: ../misc/DNS_client_conf.jpg Graphic file (type bmp)
+<../misc/DNS_client_conf.jpg>
+ [47]
+File: ../misc/DNS_client_test.jpg Graphic file (type bmp)
+<../misc/DNS_client_test.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2454--2455
+[]\TU/TimesNewRoman(0)/m/n/14.4 Далее представлено развертывание службы динамич
+еского
+ []
+
+
+Underfull \hbox (badness 4899) in paragraph at lines 2454--2455
+\TU/TimesNewRoman(0)/m/n/14.4 конфигурирования хостов (DHCP). Конфигураация сер
+вера представлена
+ []
+
+File: ../misc/DHCP_config_server.jpg Graphic file (type bmp)
+<../misc/DHCP_config_server.jpg>
+[48]
+File: ../misc/DHCP_config_client.jpg Graphic file (type bmp)
+<../misc/DHCP_config_client.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2473--2474
+[]\TU/TimesNewRoman(0)/m/n/14.4 Результат получения клиентом конфигураций предс
+тавлена на
+ []
+
+File: ../misc/DHCP_res.jpg Graphic file (type bmp)
+<../misc/DHCP_res.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2483--2484
+[]\TU/TimesNewRoman(0)/m/n/14.4 Далее представлены артефакты, иллюстрирующие ко
+рректное
+ []
+
+[49]
+File: ../misc/apache_server_conf.jpg Graphic file (type bmp)
+<../misc/apache_server_conf.jpg>
+File: ../misc/apache_resoult.jpg Graphic file (type bmp)
+<../misc/apache_resoult.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2502--2503
+[]\TU/TimesNewRoman(0)/m/n/14.4 Далее произведено развертывание службы времени 
+— NTP с
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 2502--2503
+\TU/TimesNewRoman(0)/m/n/14.4 использованием chrony. На Рисунке[][]2.11[][] пре
+дставлен статус службы на
+ []
+
+File: ../misc/chronyd_client.jpg Graphic file (type bmp)
+<../misc/chronyd_client.jpg>
+[50]
+File: ../misc/chronyc_now_client.jpg Graphic file (type bmp)
+<../misc/chronyc_now_client.jpg>
+File: ../misc/NFS_config.jpg Graphic file (type bmp)
+<../misc/NFS_config.jpg>
+
+Underfull \hbox (badness 3179) in paragraph at lines 2529--2530
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проверка доступности файла отправленного с серв
+ера на клиенте,
+ []
+
+File: ../misc/NFS_client.jpg Graphic file (type bmp)
+<../misc/NFS_client.jpg>
+[51]
+Underfull \hbox (badness 1990) in paragraph at lines 2538--2539
+[]\TU/TimesNewRoman(0)/m/n/14.4 Также необходимо развернуть службу управления п
+ользователями в
+ []
+
+File: ../misc/IPA_status.jpg Graphic file (type bmp)
+<../misc/IPA_status.jpg>
+File: ../misc/IPA_users.jpg Graphic file (type bmp)
+<../misc/IPA_users.jpg>
+File: ../misc/IPA_user_log.jpg Graphic file (type bmp)
+<../misc/IPA_user_log.jpg>
+[52]
+File: ../misc/cisco_topo.png Graphic file (type bmp)
+<../misc/cisco_topo.png>
+ [53]
+File: ../misc/cisco_ping.png Graphic file (type bmp)
+<../misc/cisco_ping.png>
+
+Underfull \hbox (badness 1661) in paragraph at lines 2588--2589
+[]\TU/TimesNewRoman(0)/m/n/14.4 В Листинге[][]2.1[][] представлена конфигурация
+ одного из коммутаторов
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 2589.
+(../configs/SW_1_L3_DERDZYAN_startup-config.txt [54] [55] [56] [57] [58])
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 2741--2743
+[]\TU/TimesNewRoman(0)/m/n/14.4 В ходе выполнения данной курсовой работы было п
+роведено
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 2744--2745
+\TU/TimesNewRoman(0)/m/n/14.4 а также планирование адресации, маршрутизации, по
+литик фильтрации
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2744--2745
+\TU/TimesNewRoman(0)/m/n/14.4 трафика, обеспечения качества обслуживания, служб
+ доменных имен,
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 2744--2745
+\TU/TimesNewRoman(0)/m/n/14.4 управления пользователями, внедрения DHCP-сервера
+ и других сетевых
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 2748--2749
+[]\TU/TimesNewRoman(0)/m/n/14.4 Основными этапами работы стали обзор теоретичес
+ких основ и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2750--2751
+[]\TU/TimesNewRoman(0)/m/n/14.4 Таким образом, выполнение данной курсовой работ
+ы позволило
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2750--2751
+\TU/TimesNewRoman(0)/m/n/14.4 разработать рекомендации по проектированию и реал
+изации системы
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 2750--2751
+\TU/TimesNewRoman(0)/m/n/14.4 управления закупками и разливом вина для предприя
+тия, занимающегося
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 2750--2751
+\TU/TimesNewRoman(0)/m/n/14.4 эффективный контроль и управление процессами заку
+пки и разлива, что
+ []
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 2750--2751
+\TU/TimesNewRoman(0)/m/n/14.4 способствует повышению производительности предпри
+ятия. Итоговое
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2750--2751
+\TU/TimesNewRoman(0)/m/n/14.4 решение предоставит предприятию не только возможн
+ость улучшить
+ []
+
+[60]
+Underfull \hbox (badness 3449) in paragraph at lines 2757--2757
+[]\TU/TimesNewRoman(0)/m/n/14.4 Внутренние механизмы ТСР, влияющие на скорость 
+загрузки: часть
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 2757--2757
+[]\TU/TimesNewRoman(0)/m/n/14.4 Основы компьютерных сетей. Тема №9. Маршрутизац
+ия: статическая
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 2757--2757
+\TU/TimesNewRoman(0)/m/n/14.4 и динамическая на примере RIP, OSPF и EIGRP. — Ре
+жим доступа:
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 2757--2757
+[]\TU/TimesNewRoman(0)/m/n/14.4 Приоритет IP и значения DSCP в QoS (Quality of 
+Service) // Блог
+ []
+
+[61] [62
+
+] (../configs/R_1_DERDZYAN_startup-config.txt [63] [64])
+(../configs/SW_2_L3_DERDZYAN_startup-config.txt [65] [66] [67] [68] [69])
+(../configs/SW_3_L3_DERDZYAN_startup-config.txt [70] [71] [72] [73])
+(../configs/SW_1_L2_DERDZYAN_startup-config.txt [74] [75] [76])
+(../configs/SW_2_L2_DERDZYAN_startup-config.txt [77] [78]) [79] (./preamble.aux
+)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `preamble.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'preamble.run.xml'.
+\openout1 = `preamble.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 31150 strings out of 478682
+ 594824 string characters out of 5849664
+ 2054018 words of memory out of 5000000
+ 50803 multiletter control sequences out of 15000+600000
+ 516591 words of font info for 93 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 86i,17n,114p,1551b,5184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on preamble.pdf (79 pages).

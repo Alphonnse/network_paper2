@@ -1,0 +1,35 @@
+@online{ssh-cisco,
+note={Настройка SSH в Cisco // Хабр URL:
+                  \url{https://habr.com/ru/articles/68262/} (дата
+                  обращения: 24.12.2023)}
+}
+@online{stp-for-small,
+note={Сети для самых маленьких. Часть четвертая. STP // Хабр URL:
+                  \url{https://habr.com/ru/articles/143768/} (дата
+                  обращения: 24.12.2023)}
+}
+@online{cisco-etherchannel,
+note={Основы компьютерных сетей. Тема №8. Протокол агрегирования
+                  каналов: Etherchannel // Хабр URL:
+                  \url{https://habr.com/ru/articles/334778/} (дата
+                  обращения 24.12.2023)}
+}
+@online{rsa,
+note={Криптография с открытым ключом: ключи RSA // Хабр URL:
+                  \url{https://habr.com/ru/articles/767750/} (дата
+                  обращения: 24.12.2023)}
+}
+@online{apache-vs-nginx,
+note={Apache vs Nginx: практический взгляд // Хабр URL:
+                  \url{https://habr.com/ru/articles/267721/} (дата
+                  обращения 24.12.2023)}
+}
+@online{dscp-value,
+note={Приоритет IP и значения DSCP в QoS (Quality of Service) // Блог
+                  SEDICOMM URL:
+                  \url{ttps://blog.sedicomm.com/2021/10/25/prioritet-ip-i-znacheniya-dscp-v-qos-quality-of-service/} (дата обращения: 24.12.2023}
+}
+@book{query-theory,
+note={Жан Вальран, Шьям Парех Коммуникационные сети: краткое
+                  введение. - М.: ДМК Пресс, 2023. - 268 с.}
+}

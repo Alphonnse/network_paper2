@@ -1,0 +1,107 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{tcp-mech}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Хабр}
+      \field{title}{Внутренние механизмы ТСР, влияющие на скорость загрузки: часть 1}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://habr.com/ru/company/webo/blog/326258/
+      \endverb
+      \verb{url}
+      \verb https://habr.com/ru/company/webo/blog/326258/
+      \endverb
+    \endentry
+    \entry{cisco-etherchannel}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{note}{Основы компьютерных сетей. Тема №8. Протокол агрегирования каналов: Etherchannel // Хабр URL: \url{https://habr.com/ru/articles/334778/} (дата обращения 24.12.2023)}
+    \endentry
+    \entry{query-theory}{book}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{note}{Жан Вальран, Шьям Парех Коммуникационные сети: краткое введение. - М.: ДМК Пресс, 2023. - 268 с.}
+    \endentry
+    \entry{stp-for-small}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{note}{Сети для самых маленьких. Часть четвертая. STP // Хабр URL: \url{https://habr.com/ru/articles/143768/} (дата обращения: 24.12.2023)}
+    \endentry
+    \entry{habr-routing}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Хабр}
+      \field{title}{Основы компьютерных сетей. Тема №9. Маршрутизация: статическая и динамическая на примере RIP, OSPF и EIGRP}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://habr.com/ru/articles/335090/
+      \endverb
+      \verb{url}
+      \verb https://habr.com/ru/articles/335090/
+      \endverb
+    \endentry
+    \entry{dscp-value}{online}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{note}{Приоритет IP и значения DSCP в QoS (Quality of Service) // Блог SEDICOMM URL: \url{ttps://blog.sedicomm.com/2021/10/25/prioritet-ip-i-znacheniya-dscp-v-qos-quality-of-service/} (дата обращения: 24.12.2023}
+    \endentry
+    \entry{comp-network-olipher}{book}{}
+      \name{author}{1}{}{%
+        {{hash=125591ed3f148a6950faea3472850adc}{%
+           family={Олифер},
+           familyi={О\bibinitperiod},
+           given={Виктор\bibnamedelima Григорьевич},
+           giveni={В\bibinitperiod\bibinitdelim Г\bibinitperiod}}}%
+      }
+      \strng{namehash}{125591ed3f148a6950faea3472850adc}
+      \strng{fullhash}{125591ed3f148a6950faea3472850adc}
+      \strng{bibnamehash}{125591ed3f148a6950faea3472850adc}
+      \strng{authorbibnamehash}{125591ed3f148a6950faea3472850adc}
+      \strng{authornamehash}{125591ed3f148a6950faea3472850adc}
+      \strng{authorfullhash}{125591ed3f148a6950faea3472850adc}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Компьютерные сети: принципы, технологии, протоколы}
+      \field{year}{2021}
+      \field{pages}{1050}
+      \range{pages}{1}
+    \endentry
+    \entry{apache-vs-nginx}{online}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{note}{Apache vs Nginx: практический взгляд // Хабр URL: \url{https://habr.com/ru/articles/267721/} (дата обращения 24.12.2023)}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
